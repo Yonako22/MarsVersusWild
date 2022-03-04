@@ -3,6 +3,8 @@ using UnityEngine;
  
 public class GridManager : MonoBehaviour
 {
+    public static GridManager instance;
+
     [SerializeField] private int _width, _height;
  
     [SerializeField] private Tile _tilePrefab;
@@ -10,10 +12,19 @@ public class GridManager : MonoBehaviour
     [SerializeField] private Transform _cam;
  
     private Dictionary<Vector2, Tile> _tiles;
- 
-    void Start() { GenerateGrid(); }
- 
-    void GenerateGrid() 
+    
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("STOP! Grid");
+            return;
+        }
+
+        instance = this;
+    }
+
+   public void GenerateGrid() 
     {
         _tiles = new Dictionary<Vector2, Tile>();
         
@@ -30,7 +41,7 @@ public class GridManager : MonoBehaviour
                 _tiles[new Vector2(x, y)] = spawnedTile;
             }
         }
- 
+
         _cam.transform.position = new Vector3((float)_width/2 -0.5f, (float)_height / 2 - 0.5f,-10);
         _cam.transform.position = new Vector3(3.6f, _cam.transform.position.y, _cam.transform.position.z);
     }
