@@ -11,10 +11,13 @@ public class Tile : MonoBehaviour
 
     
     public GameObject building;
+    public Buildings buildingScript;
+    
 
     private void Start()
     {
         _highlight.SetActive(false);
+        buildingScript = building.GetComponent<Buildings>();
     }
 
     public void Init(bool isOffset)
@@ -30,12 +33,17 @@ public class Tile : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log(name);
-        if(building != null)
+        if(building != null && !buildingScript.canBeUpgrade)
         {
             Debug.Log("Impossible de construire ici, il y a déjà une tourelle.");
             return;
         }
-        
+        else if (building != null && buildingScript.canBeUpgrade)
+        {
+            // Quand tu touche un batiment qui peut etre upgrade
+            buildingScript.buildingLevel +=1;
+        }
+
         GameObject turretToBuild = BuildingManager.instance.GetTurretToBuild();
         building = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
     }
