@@ -1,17 +1,20 @@
-using System;
 using UnityEngine;
 
 public class BuildingManager : MonoBehaviour
 {
     public static BuildingManager instance;
     public GameObject[] buildings;
-    public GameObject turretToBuild;
+    private GameObject turretToBuild;
 
     public int numberOfAutoTurrets;
     public int numberOfLaserTurrets;
 
+    public float wood;
+    public float woodPerSecond = 1;
     private void Awake()
     {
+        wood = 1.5f;
+        
         if (instance != null)
         {
             Debug.LogWarning("STOP! building");
@@ -21,23 +24,35 @@ public class BuildingManager : MonoBehaviour
         instance = this;
     }
 
-    private void Start()
+    private void Update()
     {
-        turretToBuild = buildings[0]; // Par défaut
+        wood += Time.deltaTime * woodPerSecond;
     }
 
     public void BuildAutoTurret()
     {
         numberOfAutoTurrets++;
         turretToBuild = buildings[0];
+        //wood -= 10;
     }
     public void BuildLaserTurret()
     {
         numberOfLaserTurrets++;
         turretToBuild = buildings[1];
+        //wood -= 20;
     }
-    public void BuildBarricades() { turretToBuild = buildings[2]; }
-    public void BuildInfirmary() { turretToBuild = buildings[3]; }
+
+    public void BuildBarricades()
+    {
+        turretToBuild = buildings[2];
+        //wood -= 35;
+    }
+
+    public void BuildInfirmary()
+    {
+        turretToBuild = buildings[3];
+        //wood -+ 100;
+    }
 
     public GameObject GetTurretToBuild()
     {
