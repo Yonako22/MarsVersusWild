@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -3671316359095490778}
   m_Layer: 0
   m_Name: AutoTurret
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.09, y: 5.13}
+    oldSize: {x: 1.018, y: 1.026}
     newSize: {x: 1.0415039, y: 1.0415039}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

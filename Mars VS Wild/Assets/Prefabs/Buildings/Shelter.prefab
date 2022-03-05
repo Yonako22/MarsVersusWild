@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 364621510033472923}
   - component: {fileID: 1359750927312668793}
+  - component: {fileID: 6753152371127300789}
   m_Layer: 0
   m_Name: Shelter
   m_TagString: Shelter
@@ -57,3 +58,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.059221, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6753152371127300789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364621510033472922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1821c6fbbded0634aad831fa5f3b0951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingHP: 100
+  col: {fileID: 0}
+  canBeUpgrade: 0
+  buildingPriceLvl1: 0
+  buildingPriceLvl2: 50
+  buildingPriceLvl3: 60
+  buildingLevel: 1
