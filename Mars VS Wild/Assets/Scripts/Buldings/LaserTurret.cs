@@ -25,8 +25,6 @@ public class LaserTurret : Buildings
         damage = 10;
         buildingHP = 30;
 
-        _rotation = new Vector2(90, 0);
-        
         laser1 = Instantiate(laser, new Vector2(cannon1.transform.position.x, cannon1.transform.position.y + 1.2f), quaternion.identity);
         laser2 = Instantiate(laser, new Vector2(cannon2.transform.position.x, cannon2.transform.position.y - 1.2f), quaternion.identity);
         laser3 = Instantiate(laser, new Vector2(cannon3.transform.position.x - 1.2f, cannon3.transform.position.y), cannon3.transform.rotation);
