@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d3e883c-645f-475e-be09-927506d36d41" name="Changes" comment="" />
+    <list default="true" id="c5d598fe-422d-4b0e-92f1-02dea155aac6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +10,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="25wQQmFYNTTpObul9p7bjcoGR61" />
+  <component name="ProjectId" id="25wQf1kQ1mVGhsCyJqtxZaFnLVe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -25,12 +25,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1d3e883c-645f-475e-be09-927506d36d41" name="Changes" comment="" />
-      <created>1646435660370</created>
+      <changelist id="c5d598fe-422d-4b0e-92f1-02dea155aac6" name="Changes" comment="" />
+      <created>1646435774876</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1646435660370</updated>
-      <workItem from="1646435660371" duration="136000" />
+      <updated>1646435774876</updated>
+      <workItem from="1646435778008" duration="1001000" />
     </task>
     <servers />
   </component>
@@ -40,6 +40,17 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

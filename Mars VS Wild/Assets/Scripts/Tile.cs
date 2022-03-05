@@ -5,6 +5,8 @@ public class Tile : MonoBehaviour
     [SerializeField] private Color _baseColor, _offsetColor;
     [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] private GameObject _highlight;
+    
+    public GameObject building;
 
     private void Start()
     {
@@ -19,6 +21,7 @@ public class Tile : MonoBehaviour
     void OnMouseEnter()
     {
         _highlight.SetActive(true);
+        Debug.Log(name);
     }
  
     void OnMouseExit()
