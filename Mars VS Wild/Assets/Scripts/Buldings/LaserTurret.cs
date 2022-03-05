@@ -25,10 +25,10 @@ public class LaserTurret : Buildings
         damage = 10;
         buildingHP = 30;
 
-        laser1 = Instantiate(laser, new Vector2(cannon1.transform.position.x, cannon1.transform.position.y + 1.2f), quaternion.identity);
-        laser2 = Instantiate(laser, new Vector2(cannon2.transform.position.x, cannon2.transform.position.y - 1.2f), quaternion.identity);
-        laser3 = Instantiate(laser, new Vector2(cannon3.transform.position.x - 1.2f, cannon3.transform.position.y), cannon3.transform.rotation);
-        laser4 = Instantiate(laser, new Vector2(cannon4.transform.position.x + 1.2f, cannon4.transform.position.y),cannon4.transform.rotation );
+        laser1 = Instantiate(laser, new Vector2(cannon1.transform.position.x, cannon1.transform.position.y), quaternion.identity);
+        laser2 = Instantiate(laser, new Vector2(cannon2.transform.position.x, cannon2.transform.position.y), cannon2.transform.rotation);
+        laser3 = Instantiate(laser, new Vector2(cannon3.transform.position.x, cannon3.transform.position.y), cannon3.transform.rotation);
+        laser4 = Instantiate(laser, new Vector2(cannon4.transform.position.x, cannon4.transform.position.y),cannon4.transform.rotation );
         
         laser1.SetActive(false);
         laser2.SetActive(false);

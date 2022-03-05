@@ -4,8 +4,7 @@ using UnityEngine;
 public class Tile : MonoBehaviour 
 {
     [SerializeField] private GameObject _highlight;
-
-
+    
     public GameObject building;
     public Buildings buildingScript;
 
@@ -26,7 +25,6 @@ public class Tile : MonoBehaviour
             buildingScript = building.GetComponent<Buildings>();  
             if(!buildingScript.canBeUpgrade)
             {
-                                                                           
                 Debug.Log("Impossible de construire ici, il y a déjà une tourelle.");
                 return;
             }

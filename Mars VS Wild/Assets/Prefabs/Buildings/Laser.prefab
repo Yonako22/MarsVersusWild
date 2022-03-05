@@ -123,4 +123,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564a81d04a6aa8349a46f45bca03d4d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LaserTurret: {fileID: 1778998561565666787, guid: aaf914274650835418baa68e090834e0, type: 3}
+  laserTurret: {fileID: 1778998561565666787, guid: aaf914274650835418baa68e090834e0, type: 3}
+  laserTurretScript: {fileID: 0}
