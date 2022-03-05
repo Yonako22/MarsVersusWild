@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "Infirmerie n\xB03 Animation"
+  m_Name: "Fl\xE8che Am\xE8lioration Animation"
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,11 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -5785817290576563572, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
-    - time: 0.2
-      value: {fileID: 2876474068393593474, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
-    - time: 0.38333333
-      value: {fileID: -5785817290576563572, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
+      value: {fileID: 2702761720606446831, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
+    - time: 0.21666667
+      value: {fileID: -5121010616331609503, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
+    - time: 0.43333334
+      value: {fileID: 2702761720606446831, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,15 +44,15 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -5785817290576563572, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
-    - {fileID: 2876474068393593474, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
-    - {fileID: -5785817290576563572, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
+    - {fileID: 2702761720606446831, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
+    - {fileID: -5121010616331609503, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
+    - {fileID: 2702761720606446831, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.4
+    m_StopTime: 0.45000002
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
