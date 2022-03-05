@@ -187,6 +187,7 @@ MonoBehaviour:
   _highlight: {fileID: 1370264630046481362}
   positionOffset: {x: 0, y: 0, z: 0}
   building: {fileID: 0}
+  buildingScript: {fileID: 0}
 --- !u!61 &7371554739975182451
 BoxCollider2D:
   m_ObjectHideFlags: 0
