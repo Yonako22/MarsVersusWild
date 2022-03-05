@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -509, y: 229.8}
+  m_AnchoredPosition: {x: -298, y: 175}
   m_SizeDelta: {x: 18.6537, y: 18.6537}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8856909
@@ -563,7 +563,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -509, y: 133.70003}
+  m_AnchoredPosition: {x: -298, y: 78.90004}
   m_SizeDelta: {x: 18.6537, y: 18.6537}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &995123872
@@ -960,6 +960,11 @@ MonoBehaviour:
   girafeImage: {fileID: 8856910}
   gorilleImage: {fileID: 2024819927}
   rhinoImage: {fileID: 624598353}
+  prefabPerroquet: {fileID: 0}
+  prefabGirafe: {fileID: 0}
+  prefabGorille: {fileID: 0}
+  prefabRhino: {fileID: 0}
+  summonedAnimal: {fileID: 0}
 --- !u!4 &1601337082
 Transform:
   m_ObjectHideFlags: 0
@@ -1142,7 +1147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -509, y: 182.00002}
+  m_AnchoredPosition: {x: -298, y: 127.20003}
   m_SizeDelta: {x: 18.6537, y: 18.6537}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2024819926
@@ -1217,7 +1222,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -509, y: 276}
+  m_AnchoredPosition: {x: -298, y: 221.20001}
   m_SizeDelta: {x: 18.6537, y: 18.6537}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2047273736
