@@ -50,17 +50,17 @@ public class AnimalsUnlock : MonoBehaviour
     {
         if (giraffeUnlocked && col.gameObject.CompareTag("Shelter"))
         {
-            //Déverouiller la girafe dans le menu puis détruire le gameobject
+            //Déverrouiller la girafe dans le menu puis détruire le gameobject
         }
         
         if (gorillaUnlocked && col.gameObject.CompareTag("Shelter"))
         {
-            //Déverouiller le gorille dans le menu puis détruire le gameobject
+            //Déverrouiller le gorille dans le menu puis détruire le gameobject
         }
         
         if (rhinoUnlocked && col.gameObject.CompareTag("Shelter"))
         {
-            //Déverouiller le gorille dans le menu puis détruire le gameobject
+            //Déverrouiller le gorille dans le menu puis détruire le gameobject
         }
     }
 }
