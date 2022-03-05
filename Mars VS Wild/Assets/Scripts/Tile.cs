@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
  
 public class Tile : MonoBehaviour 
@@ -38,7 +39,13 @@ public class Tile : MonoBehaviour
             buildingScript.buildingLevel +=1;
         }
 
-        GameObject turretToBuild = BuildingManager.instance.GetTurretToBuild();
+        if (building == null)
+        {
+        }
+
+        GameObject buildingToBuild = BuildingManager.instance.GetBuildingToBuild();
+        building = (GameObject)Instantiate(buildingToBuild, transform.position, quaternion.identity);
+        Debug.Log("built");
     }
 
     void OnMouseExit()
