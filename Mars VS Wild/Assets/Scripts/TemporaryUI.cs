@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TemporaryUI : MonoBehaviour
@@ -7,16 +8,17 @@ public class TemporaryUI : MonoBehaviour
 
     public float wood;
     public float woodPerSecond = 1;
-
-    // Start is called before the first frame update
+    public TextMeshProUGUI woodTxt;
+    
     void Start()
     {
-        wood = 0;
+        wood = 1.5f;
     }
 
     // Update is called once per frame
     void Update()
     {
         wood += Time.deltaTime * woodPerSecond;
+        woodTxt.text = " " + (int)wood;
     }
 }

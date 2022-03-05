@@ -19,7 +19,7 @@ public class EnemySpawnManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(Spawn());
-        spawnCooldown = 2.5f;
+        spawnCooldown = 4f;
     }
 
     private void Update()
@@ -29,8 +29,11 @@ public class EnemySpawnManager : MonoBehaviour
 
     private IEnumerator Spawn()
     {
-        enemyToSpawn = Random.Range(1, 3);
-        placeToSpawn = Random.Range(0, 12);
+        enemyToSpawn = Random.Range(1, 4);
+        placeToSpawn = Random.Range(0, 13);
+        Debug.Log(enemyToSpawn);
+        Debug.Log(placeToSpawn);
+        yield return new WaitForEndOfFrame();
 
         if (enemyToSpawn == 1)
         {
@@ -48,10 +51,16 @@ public class EnemySpawnManager : MonoBehaviour
         }
         
         yield return new WaitForSeconds(spawnCooldown);
+        StartCoroutine(Spawn());
     }
 
-    void SpawnTime()
-    {
+    void SpawnTime()    //Pour accélérer le spawn des ennemis quand on aura un timer
+    { 
+        // if (totalTime > 12secondes)
+        // {
+        //     spawnCooldown = 2f;
+        // }
+        //
         // if (totalTime > 30secondes)
         // {
         //     spawnCooldown = 2f;
