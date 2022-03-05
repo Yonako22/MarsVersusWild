@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4e0f901-2a91-43ba-bcd2-04722ee1b47d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mars VS Wild/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mars VS Wild/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Animaux/GirafeTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Animaux/GirafeTest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Animaux/GorilleTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Animaux/GorilleTest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Animaux/PerroquetTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Animaux/PerroquetTest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Animaux/RhinoTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Animaux/RhinoTest.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animals/AnimalsUnlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animals/AnimalsUnlock.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +77,7 @@
       <workItem from="1646427913297" duration="13339000" />
       <workItem from="1646463777869" duration="2426000" />
       <workItem from="1646469309319" duration="4981000" />
-      <workItem from="1646489263959" duration="4574000" />
+      <workItem from="1646489263959" duration="5030000" />
     </task>
     <servers />
   </component>
