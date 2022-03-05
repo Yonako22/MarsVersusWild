@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 1778998561565666790}
   - component: {fileID: 1778998561565666785}
   - component: {fileID: 1778998561565666784}
+  - component: {fileID: -6964458219944899225}
   m_Layer: 9
   m_Name: LaserTurret
   m_TagString: Building
@@ -191,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingHP: 0
-  col: {fileID: 0}
+  col: {fileID: -6964458219944899225}
   canBeUpgrade: 0
   buildingPriceLvl1: 20
   buildingPriceLvl2: 30
@@ -204,6 +205,32 @@ MonoBehaviour:
   cannon3: {fileID: 1778998561386440792}
   cannon4: {fileID: 1778998561093020120}
   shootingCooldown: 3
+--- !u!61 &-6964458219944899225
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778998561565666787}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1778998562910217982
 GameObject:
   m_ObjectHideFlags: 0
