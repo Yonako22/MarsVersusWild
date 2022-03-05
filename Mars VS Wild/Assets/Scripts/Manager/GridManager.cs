@@ -40,7 +40,7 @@ public class GridManager : MonoBehaviour
         }
 
         _cam.transform.position = new Vector3((float)_width/2 -0.5f, (float)_height / 2 - 0.5f,-10);
-        _cam.transform.position = new Vector3(3.6f, _cam.transform.position.y, _cam.transform.position.z);
+        _cam.transform.position = new Vector3(4.1f, _cam.transform.position.y, _cam.transform.position.z);
     }
  
     public Tile GetTileAtPosition(Vector2 pos) {

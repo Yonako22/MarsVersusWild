@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     {
         GridManager.instance.GenerateGrid();
         
-        wood = 1.5f;
+        wood = 10;
     }
 
     private void Update()

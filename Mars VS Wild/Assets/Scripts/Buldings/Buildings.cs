@@ -19,12 +19,4 @@ public class Buildings : MonoBehaviour
     buildingLevel = 1;
     canBeUpgrade = true;
   }
-
-  public void Update()
-  {
-    if (buildingHP <= 0)
-    {
-      Destroy(gameObject);
-    }
-  }
 }
