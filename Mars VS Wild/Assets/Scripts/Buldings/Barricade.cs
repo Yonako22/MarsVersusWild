@@ -18,6 +18,7 @@ public class Barricade : Buildings
         if (buildingLevel == 3)
         {
             buildingHP = 70;
+            canBeUpgrade = false;
         }
         
     }

@@ -18,23 +18,14 @@ public class Buildings : MonoBehaviour
   {
     col = gameObject.GetComponent<Collider2D>();
     buildingLevel = 1;
-  }
-
-  private void Start()
-  {
     canBeUpgrade = true;
   }
 
-  private void Update()
+  public void Update()
   {
     if (buildingHP <= 0)
     {
       Destroy(gameObject);
-    }
-
-    if (buildingLevel == 3)
-    {
-      canBeUpgrade = false;
     }
   }
 }
