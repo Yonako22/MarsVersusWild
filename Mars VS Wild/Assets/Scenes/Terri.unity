@@ -975,7 +975,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Buildings
+  m_text: Animals
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b7b154c01c6af744884e1906697b3cc6, type: 2}
   m_sharedMaterial: {fileID: 8070895840686408552, guid: b7b154c01c6af744884e1906697b3cc6, type: 2}
@@ -2549,6 +2549,7 @@ GameObject:
   - component: {fileID: 2130203205}
   - component: {fileID: 2130203207}
   - component: {fileID: 2130203206}
+  - component: {fileID: 2130203208}
   m_Layer: 5
   m_Name: DisplayZone
   m_TagString: Untagged
@@ -2613,3 +2614,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130203204}
   m_CullTransparentMesh: 1
+--- !u!114 &2130203208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130203204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7315d6f9b12b14caa3280106905b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wood: 0
+  woodPerSecond: 1
