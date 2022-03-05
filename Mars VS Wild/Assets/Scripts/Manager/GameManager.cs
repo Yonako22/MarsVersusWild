@@ -5,7 +5,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public float totalTime;
-
+    
+    public float wood;
+    public float woodPerSecond = 1;
     private void Awake()
     {
         if (instance != null)
@@ -20,6 +22,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         GridManager.instance.GenerateGrid();
+        
+        wood = 1.5f;
     }
 
     private void Update()
@@ -30,5 +34,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Victory");
         }
+        
+        wood += Time.deltaTime * woodPerSecond;
     }
 }

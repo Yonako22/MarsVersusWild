@@ -183,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _highlight: {fileID: 1370264630046481362}
   building: {fileID: 0}
+  daddy: {fileID: 2513524865283364857, guid: 9a5557da4443bb24ca0a2ccb5e8b3bdb, type: 3}
   buildingScript: {fileID: 0}
 --- !u!61 &7371554739975182451
 BoxCollider2D:

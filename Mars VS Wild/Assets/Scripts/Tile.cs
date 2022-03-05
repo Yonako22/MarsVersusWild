@@ -1,4 +1,4 @@
-using System;
+using Unity.Mathematics;
 using UnityEngine;
  
 public class Tile : MonoBehaviour 
@@ -23,22 +23,33 @@ public class Tile : MonoBehaviour
     {
         if (building != null)
         {
-            buildingScript = building.GetComponent<Buildings>();
+            buildingScript = building.GetComponent<Buildings>();  
+            if(!buildingScript.canBeUpgrade)
+            {
+                                                                           
+                Debug.Log("Impossible de construire ici, il y a déjà une tourelle.");
+                return;
+            }
+                                                                        
+            if (buildingScript.canBeUpgrade)
+            {
+                buildingScript.buildingLevel +=1;
+            }
         }
-        Debug.Log(name);
-        if(building != null && !buildingScript.canBeUpgrade)
+        else
         {
-           
-            Debug.Log("Impossible de construire ici, il y a déjà une tourelle.");
-            return;
+            GameObject buildingToBuild = BuildingManager.instance.GetBuildingToBuild();
+            
+            if (GameManager.instance.wood >= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl1)
+            {
+                building = (GameObject)Instantiate(buildingToBuild, transform.position, quaternion.identity);
+                GameManager.instance.wood -= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl1;
+            }
+            else
+            {
+                Debug.Log("pas assez d'argent");
+            }
         }
-        
-        if (building != null && buildingScript.canBeUpgrade)
-        {
-            buildingScript.buildingLevel +=1;
-        }
-
-        GameObject turretToBuild = BuildingManager.instance.GetTurretToBuild();
     }
 
     void OnMouseExit()
