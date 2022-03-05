@@ -4,12 +4,9 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class TemporaryUI : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
-
-    public float wood;
-    public float woodPerSecond = 1;
-    [SerializeField] private bool quitOptions;
+    private bool quitOptions;
     public TextMeshProUGUI woodTxt;
     [SerializeField] private bool isPaused;
     public GameObject areUSureToQuit;
@@ -18,32 +15,24 @@ public class TemporaryUI : MonoBehaviour
     void Start()
     {
         isPaused = false;
-        quitOptions = false;
-        wood = 1.5f;
     }
     
     void Update()
     {
-        wood += Time.deltaTime * woodPerSecond;
-        woodTxt.text = " " + (int)wood;
+        woodTxt.text = " " + (int)GameManager.instance.wood;
     }
 
     public void Pause()
     {
+        if (!quitOptions)
+        {
+            
+        }
         Time.timeScale = 0f;
     }
 
     public void Options()
     {
-        if (!quitOptions == false)
-        {
-            options.SetActive(true);
-
-        }
-        else
-        {
-            
-        }
         options.SetActive(true);
     }
 
@@ -60,5 +49,4 @@ public class TemporaryUI : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenuScene");
     }
-    
 }

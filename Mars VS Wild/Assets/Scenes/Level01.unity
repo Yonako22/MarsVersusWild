@@ -507,6 +507,9 @@ MonoBehaviour:
   wood: 0
   woodPerSecond: 1
   woodTxt: {fileID: 964837314}
+  isPaused: 0
+  areUSureToQuit: {fileID: 0}
+  options: {fileID: 0}
 --- !u!114 &219070595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1197,7 +1200,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  turretToBuild: {fileID: 0}
+  buildingToBuild: {fileID: 0}
   numberOfAutoTurrets: 0
   numberOfLaserTurrets: 0
 --- !u!1 &691451318
@@ -1909,6 +1912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8663071aba6bb4c87f3ce0a7322334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalTime: 0
 --- !u!1 &964837312
 GameObject:
   m_ObjectHideFlags: 0
