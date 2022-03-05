@@ -1,16 +1,9 @@
-using UnityEngine;
-
 public class AutoTurret : Buildings
 {
-    private void Start()
-    {
-        buildingHP = 30;
-        col = gameObject.GetComponent<Collider2D>();
-        
-        buildingPriceLvl1 =10; // + deux par posé
-        buildingPriceLvl2 = 15;
-        buildingPriceLvl3 = 15;
-        
-        buildingLevel = 1;
-    }
+    public float attackDamage;
+
+    // Tire par secondes
+    public float fireRateLvl1;
+    public float fireRateLvl2;
+    public float fireRateLvl3;
 }
