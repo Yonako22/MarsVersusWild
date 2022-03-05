@@ -624,10 +624,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c7315d6f9b12b14caa3280106905b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wood: 0
+  woodPerSecond: 1
+  quitOptions: 0
   woodTxt: {fileID: 964837314}
   isPaused: 0
   areUSureToQuit: {fileID: 0}
   options: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  monkeyAvailable: 0
+  rhinoAvailable: 0
+  parrotAvailable: 0
+  GirafAvailable: 0
 --- !u!114 &219070595
 MonoBehaviour:
   m_ObjectHideFlags: 0

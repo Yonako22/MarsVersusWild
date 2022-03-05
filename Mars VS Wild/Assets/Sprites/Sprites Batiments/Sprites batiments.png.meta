@@ -1,0 +1,1020 @@
+fileFormatVersion: 2
+guid: 3dc2bf902e9417c4bb35746b978f666a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 407884395705593926
+    second: Sprites batiments_0
+  - first:
+      213: 7700896834171833678
+    second: Sprites batiments_1
+  - first:
+      213: -7765288083703851501
+    second: Sprites batiments_2
+  - first:
+      213: 2702761720606446831
+    second: Sprites batiments_3
+  - first:
+      213: -5121010616331609503
+    second: Sprites batiments_4
+  - first:
+      213: -1903662224929867206
+    second: Sprites batiments_5
+  - first:
+      213: 8778556414984348384
+    second: Sprites batiments_6
+  - first:
+      213: -2408732126850312061
+    second: Sprites batiments_7
+  - first:
+      213: 1978529220849564363
+    second: Sprites batiments_8
+  - first:
+      213: -5334006785829256106
+    second: Sprites batiments_9
+  - first:
+      213: 8350541155918842443
+    second: Sprites batiments_10
+  - first:
+      213: 4881011643325224528
+    second: Sprites batiments_11
+  - first:
+      213: -2545854328274990185
+    second: Sprites batiments_12
+  - first:
+      213: -5442919272403075800
+    second: Sprites batiments_13
+  - first:
+      213: 4295705376675060128
+    second: Sprites batiments_14
+  - first:
+      213: 5803974524963769963
+    second: Sprites batiments_15
+  - first:
+      213: 6407652309195612148
+    second: Sprites batiments_16
+  - first:
+      213: -3847616634254962626
+    second: Sprites batiments_17
+  - first:
+      213: 5457445765540767353
+    second: Sprites batiments_18
+  - first:
+      213: -1365446777200034365
+    second: Sprites batiments_19
+  - first:
+      213: 4914768820537909141
+    second: Sprites batiments_20
+  - first:
+      213: 4133302850300694437
+    second: Sprites batiments_21
+  - first:
+      213: 8216973896169041831
+    second: Sprites batiments_22
+  - first:
+      213: -1449165697856086586
+    second: Sprites batiments_23
+  - first:
+      213: 1557047326634002302
+    second: Sprites batiments_24
+  - first:
+      213: -6770023217811050847
+    second: Sprites batiments_25
+  - first:
+      213: -5284614526670627774
+    second: Sprites batiments_26
+  - first:
+      213: 4715117952028646913
+    second: Sprites batiments_27
+  - first:
+      213: -5296018154249923808
+    second: Sprites batiments_28
+  - first:
+      213: -3571828728908099232
+    second: Sprites batiments_29
+  - first:
+      213: -8071228274543311316
+    second: Sprites batiments_30
+  - first:
+      213: -8160064416255599005
+    second: Sprites batiments_31
+  - first:
+      213: 7386226541962653550
+    second: Sprites batiments_32
+  - first:
+      213: -2042108770750229813
+    second: Sprites batiments_33
+  - first:
+      213: 4654054760316952131
+    second: Sprites batiments_34
+  - first:
+      213: 990617300709623052
+    second: Sprites batiments_35
+  - first:
+      213: -2384488492045929358
+    second: Sprites batiments_36
+  - first:
+      213: 2665342076887569808
+    second: Sprites batiments_37
+  - first:
+      213: 7544852424486832636
+    second: Sprites batiments_38
+  - first:
+      213: 6360054958404412310
+    second: Sprites batiments_39
+  - first:
+      213: -6955146312745831148
+    second: Sprites batiments_40
+  - first:
+      213: 6793888500887748119
+    second: Sprites batiments_41
+  - first:
+      213: 911774864371378346
+    second: Sprites batiments_42
+  - first:
+      213: -7678512390819627267
+    second: Sprites batiments_43
+  - first:
+      213: 4074326513412158839
+    second: Sprites batiments_44
+  - first:
+      213: 2382356777598381431
+    second: Sprites batiments_45
+  - first:
+      213: 1623229790825067571
+    second: Sprites batiments_46
+  - first:
+      213: -6135499183194077979
+    second: Sprites batiments_47
+  - first:
+      213: 6784485893366918375
+    second: Sprites batiments_48
+  - first:
+      213: 7789183288449326520
+    second: Sprites batiments_49
+  - first:
+      213: 5641624298421591041
+    second: Sprites batiments_50
+  - first:
+      213: -1618965594407117021
+    second: Sprites batiments_51
+  - first:
+      213: -3294245855777886394
+    second: Sprites batiments_52
+  - first:
+      213: -412864386633101590
+    second: Sprites batiments_53
+  - first:
+      213: 9176866617186105300
+    second: Sprites batiments_54
+  - first:
+      213: -5081443265529054744
+    second: Sprites batiments_55
+  - first:
+      213: 3187933556719237259
+    second: Sprites batiments_56
+  - first:
+      213: -3325101074015216442
+    second: Sprites batiments_57
+  - first:
+      213: -5785817290576563572
+    second: Sprites batiments_58
+  - first:
+      213: 6077181170760343901
+    second: Sprites batiments_59
+  - first:
+      213: 2876474068393593474
+    second: Sprites batiments_60
+  - first:
+      213: -3550587813513144263
+    second: Sprites batiments_61
+  - first:
+      213: 7739939133586120759
+    second: Sprites batiments_62
+  - first:
+      213: -259440639524358079
+    second: Sprites batiments_63
+  - first:
+      213: -5603800560129852990
+    second: Sprites batiments_64
+  - first:
+      213: 7034727431321119127
+    second: Sprites batiments_65
+  - first:
+      213: 3285479255346048542
+    second: Sprites batiments_66
+  - first:
+      213: 9146789778943884622
+    second: Sprites batiments_67
+  - first:
+      213: 6126364687115531694
+    second: Sprites batiments_68
+  - first:
+      213: -2152173168350082021
+    second: Sprites batiments_69
+  - first:
+      213: -4716223295810606110
+    second: Sprites batiments_70
+  - first:
+      213: 520762978135970533
+    second: Sprites batiments_71
+  - first:
+      213: -8898922440010255303
+    second: Sprites batiments_72
+  - first:
+      213: 2273989230615669120
+    second: Sprites batiments_73
+  - first:
+      213: 8641546135607432460
+    second: Sprites batiments_74
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 2
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprites batiments_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4554d0773228520800000000000000
+      internalID: 2702761720606446831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16adc8a0af38ee8b0800000000000000
+      internalID: -5121010616331609503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 1532
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcaf77af7d5257b10800000000000000
+      internalID: 1978529220849564363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_9
+      rect:
+        serializedVersion: 2
+        x: 2680
+        y: 351
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654cf1dc61dc9f5b0800000000000000
+      internalID: -5334006785829256106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_11
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2560
+        width: 1537
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05612f89a36dcb340800000000000000
+      internalID: 4881011643325224528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_14
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2560
+        width: 1565
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9d37cc7496d9b30800000000000000
+      internalID: 4295705376675060128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59fd355e334c43440800000000000000
+      internalID: 4914768820537909141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_21
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af484d0b017c5930800000000000000
+      internalID: 4133302850300694437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_22
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af20d1293e880270800000000000000
+      internalID: 8216973896169041831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_23
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd5b9ec97783ebe0800000000000000
+      internalID: -1449165697856086586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061d5e602b05e6ec0800000000000000
+      internalID: -3571828728908099232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_30
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26c1c2c5ac3dff80800000000000000
+      internalID: -8071228274543311316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_31
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e97c4b5a0a1ce80800000000000000
+      internalID: -8160064416255599005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_32
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6fee30f7e5218660800000000000000
+      internalID: 7386226541962653550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_33
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc219be74e8f8a3e0800000000000000
+      internalID: -2042108770750229813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_34
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e58e17526869040800000000000000
+      internalID: 4654054760316952131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_35
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05472dbf216fbd00800000000000000
+      internalID: 990617300709623052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_36
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274789c995898eed0800000000000000
+      internalID: -2384488492045929358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 1025
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aee035e1706354af0800000000000000
+      internalID: -412864386633101590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_56
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 512
+        width: 1023
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b883ccfeda0dd3c20800000000000000
+      internalID: 3187933556719237259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_58
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 512
+        width: 1026
+        height: 1023
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82fedb24d5a4bfa0800000000000000
+      internalID: -5785817290576563572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_60
+      rect:
+        serializedVersion: 2
+        x: 3068
+        y: 512
+        width: 1028
+        height: 1023
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a093ccce94be720800000000000000
+      internalID: 2876474068393593474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ee0dbb9fd589d20800000000000000
+      internalID: 3285479255346048542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_67
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4dbf1997dcefee70800000000000000
+      internalID: 9146789778943884622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_68
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5b40c5938350550800000000000000
+      internalID: 6126364687115531694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_69
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ccd55f7e1f122e0800000000000000
+      internalID: -2152173168350082021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_70
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb69cb66eb9c8eb0800000000000000
+      internalID: -4716223295810606110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_71
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 0
+        width: 512
+        height: 563
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e218f36b2f1a3700800000000000000
+      internalID: 520762978135970533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_72
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 0
+        width: 512
+        height: 4096
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934bf67703da08480800000000000000
+      internalID: -8898922440010255303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_73
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 0
+        width: 512
+        height: 4096
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08929e93825de8f10800000000000000
+      internalID: 2273989230615669120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites batiments_74
+      rect:
+        serializedVersion: 2
+        x: 6656
+        y: 0
+        width: 512
+        height: 4096
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05d70bec60fce770800000000000000
+      internalID: 8641546135607432460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 89f590fbff347094787e465ec9fc94f0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
