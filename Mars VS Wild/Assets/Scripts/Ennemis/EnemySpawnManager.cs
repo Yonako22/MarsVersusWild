@@ -54,7 +54,7 @@ public class EnemySpawnManager : MonoBehaviour
         StartCoroutine(Spawn());
     }
 
-    void SpawnTime()
+    void SpawnTime()    //Pour accélérer le spawn des ennemis quand on aura un timer
     { 
         // if (totalTime > 12secondes)
         // {
