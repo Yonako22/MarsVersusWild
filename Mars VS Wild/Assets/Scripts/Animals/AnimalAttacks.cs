@@ -24,6 +24,17 @@ public class AnimalAttacks : MonoBehaviour
     [SerializeField] private GameObject prefabGorille;
     [SerializeField] private GameObject prefabRhino;
 
+    [Header("Cooldowns")] 
+    public float perroquetCD;
+    public float girafeCD;
+    public float gorilleCD;
+    public float rhinoCD;
+
+    public float perroquetCounter;
+    public float girafeCounter;
+    public float gorilleCounter;
+    public float rhinoCounter;
+
     [Header("TemporaryVariable")]
     public GameObject summonedAnimal; //Stocke le dernier animal invoqué pour le détruire
     
@@ -72,25 +83,50 @@ public class AnimalAttacks : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && animalSlot != 4 && canSummon)
         {
 
-            if (animalSlot == 0)
+            if (animalSlot == 0 && perroquetCounter == 0)
             {
                 Perroquet();
+                perroquetCounter = perroquetCD;
             }
             
-            else if (animalSlot == 1)
+            else if (animalSlot == 1 && girafeCounter == 0)
             {
                 Girafe();
+                girafeCounter = girafeCD;
             }
             
-            else if (animalSlot == 2)
+            else if (animalSlot == 2 && gorilleCounter == 0)
             {
                 Gorille();
+                gorilleCounter = gorilleCD;
             }
             
-            else if (animalSlot == 3)
+            else if (animalSlot == 3 && rhino == 0)
             {
                 Rhino();
+                rhinoCounter = rhinoCD;
             }
+        }
+        
+        #endregion
+        
+        #region Réduction des Cooldown
+
+        if (perroquetCounter > 0)
+        {
+            CooldownReduction(perroquetCounter);
+        }
+        if (girafeCounter > 0)
+        {
+            CooldownReduction(girafeCounter);
+        }
+        if (gorilleCounter > 0)
+        {
+            CooldownReduction(gorilleCounter);
+        }
+        if (rhinoCounter > 0)
+        {
+            CooldownReduction(rhinoCounter);
         }
         
         #endregion
@@ -119,7 +155,6 @@ public class AnimalAttacks : MonoBehaviour
     }
     
     #endregion
-
     
     #region Invocation et Destruction
     
@@ -137,6 +172,15 @@ public class AnimalAttacks : MonoBehaviour
         yield return new WaitForSeconds(_time);
         Destroy(summonedAnimal);
         canSummon = true;
+    }
+    
+    #endregion
+    
+    #region Countdown des Cooldown
+
+    void CooldownReduction(float _animal)
+    {
+        _animal -= Time.deltaTime;
     }
     
     #endregion
