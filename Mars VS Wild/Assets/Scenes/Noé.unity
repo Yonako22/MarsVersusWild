@@ -183,6 +183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalTime: 0
+  wood: 0
+  woodPerSecond: 1
 --- !u!4 &196417199
 Transform:
   m_ObjectHideFlags: 0
@@ -441,7 +443,6 @@ MonoBehaviour:
   - {fileID: 176992558}
   - {fileID: 1671057557}
   - {fileID: 706145444}
-  gameManager: {fileID: 196417198}
 --- !u!1 &1087890005
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,13 +482,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1110421672}
+  - component: {fileID: 1110421673}
   m_Layer: 0
   m_Name: BuildingManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1110421672
 Transform:
   m_ObjectHideFlags: 0
@@ -502,6 +504,22 @@ Transform:
   m_Father: {fileID: 1345865951}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1110421673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110421671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d030c907d119b0458b2af5d098960dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildings: []
+  buildingToBuild: {fileID: 0}
+  numberOfAutoTurrets: 0
+  numberOfLaserTurrets: 0
 --- !u!1 &1150296289
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +626,7 @@ Transform:
   m_Children:
   - {fileID: 1818439743}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1457867738 stripped
 GameObject:
@@ -634,7 +652,6 @@ MonoBehaviour:
   buildingPriceLvl2: 50
   buildingPriceLvl3: 60
   buildingLevel: 1
-  buildingManager: {fileID: 0}
 --- !u!61 &1457867740 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 1359750927312668793, guid: a5635f7bfeed32f4ea4dd9cef431fe09, type: 3}
@@ -2628,7 +2645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 364621510033472923, guid: a5635f7bfeed32f4ea4dd9cef431fe09, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 364621510033472923, guid: a5635f7bfeed32f4ea4dd9cef431fe09, type: 3}
       propertyPath: m_LocalPosition.x
