@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class Prices : MonoBehaviour
 {
-
     public int turretAuto;
     public int turretCroix;
     public int Barricade;
