@@ -14,15 +14,15 @@ public class LaserTurret : Buildings
     public GameObject cannon2;
     public GameObject cannon3;
     public GameObject cannon4;
-    public float shootingRate;
+    public float shootingCooldown;
     
     void Start()
     {
         damage = 10;
-        laser1 = Instantiate(laser, cannon1.transform.position, Quaternion.identity);
-        laser2 = Instantiate(laser, cannon2.transform.position, Quaternion.identity);
-        laser3 = Instantiate(laser, cannon3.transform.position, Quaternion.identity);
-        laser4 = Instantiate(laser, cannon4.transform.position, Quaternion.identity);
+        laser1 = Instantiate(laser, cannon1.transform.position, cannon1.transform.rotation);
+        laser2 = Instantiate(laser, cannon2.transform.position, cannon2.transform.rotation);
+        laser3 = Instantiate(laser, cannon3.transform.position, cannon3.transform.rotation);
+        laser4 = Instantiate(laser, cannon4.transform.position, cannon4.transform.rotation);
         laser1.SetActive(false);
         laser2.SetActive(false);
         laser3.SetActive(false);
@@ -37,7 +37,7 @@ public class LaserTurret : Buildings
 
     private IEnumerator Shoot()
     {
-        yield return new WaitForSeconds(shootingRate);
+        yield return new WaitForSeconds(shootingCooldown);
         laser1.SetActive(true);
         laser2.SetActive(true);
         laser3.SetActive(true);
