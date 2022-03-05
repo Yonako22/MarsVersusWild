@@ -9,7 +9,7 @@ public class TemporaryUI : MonoBehaviour
 
     public float wood;
     public float woodPerSecond = 1;
-    private bool quitOptions;
+    [SerializeField] private bool quitOptions;
     public TextMeshProUGUI woodTxt;
     [SerializeField] private bool isPaused;
     public GameObject areUSureToQuit;
@@ -18,7 +18,7 @@ public class TemporaryUI : MonoBehaviour
     void Start()
     {
         isPaused = false;
-        
+        quitOptions = false;
         wood = 1.5f;
     }
     
@@ -30,15 +30,20 @@ public class TemporaryUI : MonoBehaviour
 
     public void Pause()
     {
-        if (!quitOptions)
-        {
-            
-        }
         Time.timeScale = 0f;
     }
 
     public void Options()
     {
+        if (!quitOptions == false)
+        {
+            options.SetActive(true);
+
+        }
+        else
+        {
+            
+        }
         options.SetActive(true);
     }
 
