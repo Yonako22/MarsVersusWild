@@ -14,5 +14,6 @@ public class Buildings : MonoBehaviour
   private void Awake()
   {
     col = gameObject.GetComponent<Collider2D>();
+    buildingLevel = 1;
   }
 }
