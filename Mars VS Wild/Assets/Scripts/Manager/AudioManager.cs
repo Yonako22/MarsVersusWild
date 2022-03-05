@@ -1,18 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   public static AudioManager instance;
+   public AudioMixer audioMix;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   private void Awake()
+   {
+      if (instance != null)
+      {
+         Debug.LogError("Oskur");
+         return;
+      }
+      instance = this;
+   }
+   
+   public void SetVolume(float _volume) // Volume
+   {
+      audioMix.SetFloat("Volume", _volume);
+   }
 }
