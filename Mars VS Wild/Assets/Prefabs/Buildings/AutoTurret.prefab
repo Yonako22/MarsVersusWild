@@ -108,6 +108,7 @@ MonoBehaviour:
   fireRateLvl1: 1.6
   fireRateLvl2: 2.1
   fireRateLvl3: 2.6
+  bc: {fileID: 0}
 --- !u!61 &-3671316359095490778
 BoxCollider2D:
   m_ObjectHideFlags: 0
