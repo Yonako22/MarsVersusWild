@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public float totalTime;
 
     private void Awake()
     {
@@ -18,5 +20,15 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         GridManager.instance.GenerateGrid();
+    }
+
+    private void Update()
+    {
+        totalTime += Time.deltaTime;
+
+        if (totalTime > 300)
+        {
+            Debug.Log("Victory");
+        }
     }
 }
