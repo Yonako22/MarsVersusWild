@@ -10,4 +10,9 @@ public class Buildings : MonoBehaviour
   public float buildingPriceLvl3;
 
   public int buildingLevel;
+
+  private void Awake()
+  {
+    col = gameObject.GetComponent<Collider2D>();
+  }
 }
