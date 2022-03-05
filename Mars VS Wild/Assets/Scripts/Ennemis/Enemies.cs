@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemies : MonoBehaviour
@@ -52,6 +50,7 @@ public class Enemies : MonoBehaviour
     {
         buildings.buildingHP -= damage;
         yield return new WaitForSeconds(attackCooldown);
+        StartCoroutine(Attack());
     }
 
     private IEnumerator AttackShelter()

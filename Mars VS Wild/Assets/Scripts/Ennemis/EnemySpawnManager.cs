@@ -1,8 +1,5 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
-using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -15,7 +12,6 @@ public class EnemySpawnManager : MonoBehaviour
     private int placeToSpawn;
     public float spawnCooldown;
     public List<GameObject> spawns = new List<GameObject>();
-    public GameManager gameManager;
 
     private void Start()
     {
@@ -30,23 +26,21 @@ public class EnemySpawnManager : MonoBehaviour
 
     private IEnumerator Spawn()
     {
-        enemyToSpawn = Random.Range(1, 4);
-        placeToSpawn = Random.Range(0, 13);
-        Debug.Log(enemyToSpawn);
-        Debug.Log(placeToSpawn);
+        enemyToSpawn = Random.Range(0, 2);
+        placeToSpawn = Random.Range(0, 14);
         yield return new WaitForEndOfFrame();
 
-        if (enemyToSpawn == 1)
+        if (enemyToSpawn == 0)
         {
             Instantiate(claude, spawns[placeToSpawn].transform.position, Quaternion.identity);
         }
 
-        if (enemyToSpawn == 2)
+        if (enemyToSpawn == 1)
         {
             Instantiate(robert, spawns[placeToSpawn].transform.position, Quaternion.identity);
         }
         
-        if (enemyToSpawn == 3)
+        if (enemyToSpawn == 2)
         {
             Instantiate(tony, spawns[placeToSpawn].transform.position, Quaternion.identity);
         }
@@ -57,32 +51,27 @@ public class EnemySpawnManager : MonoBehaviour
 
     void SpawnTime()    //Pour accélérer le spawn des ennemis quand on aura un timer
     { 
-        if (gameManager.totalTime > 12)
+        if (GameManager.instance.totalTime > 12)
         {
             spawnCooldown = 6f;
         }
-        
-        if (gameManager.totalTime > 30)
+        if (GameManager.instance.totalTime > 30)
         {
             spawnCooldown = 4.5f;
         }
-        
-        if (gameManager.totalTime > 60)
+        if (GameManager.instance.totalTime > 60)
         {
             spawnCooldown = 3.5f;
         }
-        
-        if (gameManager.totalTime > 120)
+        if (GameManager.instance.totalTime > 120)
         {
             spawnCooldown = 2.5f;
         }
-        
-        if (gameManager.totalTime > 180)
+        if (GameManager.instance.totalTime > 180)
         {
             spawnCooldown = 1.5f;
         }
-        
-        if (gameManager.totalTime > 240)
+        if (GameManager.instance.totalTime > 240)
         {
             spawnCooldown = 1f;
         }
