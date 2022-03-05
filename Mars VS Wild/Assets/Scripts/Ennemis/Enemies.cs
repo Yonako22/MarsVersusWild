@@ -11,6 +11,7 @@ public class Enemies : MonoBehaviour
     public float attackCooldown;
     public float hp;
     public GameObject buildingAttacked;
+    private Buildings buildings;
 
 
     private void Update()
@@ -35,14 +36,15 @@ public class Enemies : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Building"))
         {
-            StopCoroutine(Attack());
             buildingAttacked = other.gameObject;
+            buildings = buildingAttacked.GetComponent<Buildings>();
+            StopCoroutine(Attack());
         }
     }
 
     private IEnumerator Attack()
     {
-        //buildingAttacked.GetComponent<BuildingManager>().buildingLife -= damage;
+        buildings.buildingHP -= damage;
         yield return new WaitForSeconds(attackCooldown);
     }
 }
