@@ -185,6 +185,7 @@ MonoBehaviour:
   _offsetColor: {r: 1, g: 1, b: 1, a: 1}
   _renderer: {fileID: 6142234638127681881}
   _highlight: {fileID: 1370264630046481362}
+  positionOffset: {x: 0, y: 0, z: 0}
   building: {fileID: 0}
 --- !u!61 &7371554739975182451
 BoxCollider2D:

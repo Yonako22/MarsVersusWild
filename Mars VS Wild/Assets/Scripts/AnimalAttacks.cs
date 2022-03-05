@@ -30,8 +30,9 @@ public class AnimalAttacks : MonoBehaviour
     private int animalSlot = 4; //Permet d'invoquer l'animal sélectionné
 
     private bool canSummon = true; //Empêche le spam d'animaux tant que celui d'avant est toujours actif
-    
+
     #endregion
+    
     
     void Update()
     {
@@ -95,34 +96,35 @@ public class AnimalAttacks : MonoBehaviour
         #endregion
     }
 
-    #region Invocation de l'animal
+    #region Appel de l'invocation de l'animal
     
     void Perroquet()
     {
-        SummonAnimal(prefabPerroquet, Vector3.zero, Quaternion.identity, 0.5f);
+        SummonAnimal(prefabPerroquet, Vector3.zero, Quaternion.identity, 0.5f, new Vector2(1,1));
     }
 
     void Girafe()
     {
-        SummonAnimal(prefabGirafe, Vector3.zero, Quaternion.identity, 1.5f);
+        SummonAnimal(prefabGirafe, Vector3.zero, Quaternion.identity, 1.5f, new Vector2(1,6));
     }
 
     void Gorille()
     {
-        SummonAnimal(prefabGorille, Vector3.zero, Quaternion.identity, 3f);
+        SummonAnimal(prefabGorille, Vector3.zero, Quaternion.identity, 3f, new Vector2(3,3));
     }
 
     void Rhino()
     {
-        SummonAnimal(prefabRhino, Vector3.zero, Quaternion.identity, 2f);
+        SummonAnimal(prefabRhino, Vector3.zero, Quaternion.identity, 2f, new Vector2(3,1));
     }
     
     #endregion
 
+    
     #region Invocation et Destruction
     
     //Invoque l'animal selon les paramètres définis
-    void SummonAnimal(GameObject _animal, Vector3 _position, Quaternion _quaternion, float _time)
+    void SummonAnimal(GameObject _animal, Vector3 _position, Quaternion _quaternion, float _time, Vector2 _size)
     {
         summonedAnimal = Instantiate(_animal, _position, _quaternion);
         StartCoroutine(DestroyAnimal(_time));
