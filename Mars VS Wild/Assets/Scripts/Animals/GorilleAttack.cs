@@ -6,6 +6,7 @@ public class GorilleAttack : MonoBehaviour
     #region Variables
     
     public Enemies enemies; //Script des ennemis
+    public Animator animator;
 
     [SerializeField] private List<GameObject> enemiesHit = new List<GameObject>(); //Stocke les ennemis déjà touchés
 
@@ -17,6 +18,7 @@ public class GorilleAttack : MonoBehaviour
     {
         if (other.CompareTag("Enemy") && !enemiesHit.Contains(other.gameObject))
         {
+            animator.SetBool("Attacking", true);
             //enemies = other.gameObject.GetComponent<Enemies>();
             //enemies.hp -= damage;
             enemiesHit.Add(other.gameObject);

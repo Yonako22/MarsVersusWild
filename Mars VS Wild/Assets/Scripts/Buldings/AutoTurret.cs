@@ -21,11 +21,6 @@ public class AutoTurret : Buildings
     public Vector2 topRightCorner;
     public Vector2 botDownCorner;
 
-    private void Start()
-    {
-        InvokeRepeating("UpdateTarget", 0f, 0.5f);
-    }
-
     private void Update()
     {
         float shortestDistance = Mathf.Infinity;

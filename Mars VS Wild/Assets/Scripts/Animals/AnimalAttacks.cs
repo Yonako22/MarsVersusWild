@@ -1,18 +1,32 @@
 using System.Collections;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 public class AnimalAttacks : MonoBehaviour
 {
+    public static AnimalAttacks instance;
+
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogError("Il existe deux singletons de AnimalAttacks");
+            return;
+        }
+        instance = this;
+    }
+
     #region Variables
-    
-    [Header("Bindings")]
+
+    [Header("Bindings")] 
     [SerializeField] private KeyCode perroquet;
     [SerializeField] private KeyCode girafe;
     [SerializeField] private KeyCode gorille;
     [SerializeField] private KeyCode rhino;
 
-    [Header("Images")]
+    [Header("Images")] 
     [SerializeField] private Image perroquetImage;
     [SerializeField] private Image girafeImage;
     [SerializeField] private Image gorilleImage;
@@ -25,30 +39,33 @@ public class AnimalAttacks : MonoBehaviour
     [SerializeField] private GameObject prefabRhino;
 
     [Header("Cooldowns")] 
-    public float perroquetCD;
-    public float girafeCD;
-    public float gorilleCD;
-    public float rhinoCD;
+    public int perroquetCD;
+    public int girafeCD;
+    public int gorilleCD;
+    public int rhinoCD;
 
-    public float perroquetCounter;
-    public float girafeCounter;
-    public float gorilleCounter;
-    public float rhinoCounter;
+    public int perroquetCounter;
+    public int girafeCounter;
+    public int gorilleCounter;
+    public int rhinoCounter;
 
-    [Header("TemporaryVariable")]
-    public GameObject summonedAnimal; //Stocke le dernier animal invoqué pour le détruire
-    
+    public bool cooldown1 = true;
+    public bool cooldown2 = true;
+    public bool cooldown3 = true;
+    public bool cooldown4 = true;
+
+    [Header("TemporaryVariable")] public GameObject summonedAnimal; //Stocke le dernier animal invoqué pour le détruire
+
     private int animalSlot = 4; //Permet d'invoquer l'animal sélectionné
 
     private bool canSummon = true; //Empêche le spam d'animaux tant que celui d'avant est toujours actif
 
     #endregion
     
-    
     void Update()
     {
         #region Inputs et UI
-        
+
         if (Input.GetKeyDown(perroquet) || Input.GetKeyDown(girafe) || Input.GetKeyDown(gorille) ||
             Input.GetKeyDown(rhino))
         {
@@ -83,81 +100,84 @@ public class AnimalAttacks : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && animalSlot != 4 && canSummon)
         {
 
-            if (animalSlot == 0 && perroquetCounter == 0)
+            if (animalSlot == 0 && perroquetCounter <= 0)
             {
                 Perroquet();
                 perroquetCounter = perroquetCD;
             }
-            
-            else if (animalSlot == 1 && girafeCounter == 0)
+
+            else if (animalSlot == 1 && girafeCounter <= 0)
             {
                 Girafe();
                 girafeCounter = girafeCD;
             }
-            
-            else if (animalSlot == 2 && gorilleCounter == 0)
+
+            else if (animalSlot == 2 && gorilleCounter <= 0)
             {
                 Gorille();
                 gorilleCounter = gorilleCD;
             }
-            
-            else if (animalSlot == 3 && rhino == 0)
+
+            else if (animalSlot == 3 && rhinoCounter <= 0)
             {
                 Rhino();
                 rhinoCounter = rhinoCD;
             }
         }
-        
+
         #endregion
         
         #region Réduction des Cooldown
 
-        if (perroquetCounter > 0)
+        if (perroquetCounter > 0 && cooldown1)
         {
-            CooldownReduction(perroquetCounter);
+            StartCoroutine(Cooldown1());
         }
-        if (girafeCounter > 0)
+
+        if (girafeCounter > 0 && cooldown2)
         {
-            CooldownReduction(girafeCounter);
+            StartCoroutine(Cooldown2());
         }
-        if (gorilleCounter > 0)
+
+        if (gorilleCounter > 0  && cooldown3)
         {
-            CooldownReduction(gorilleCounter);
+            StartCoroutine(Cooldown3());
         }
-        if (rhinoCounter > 0)
+
+        if (rhinoCounter > 0  && cooldown4)
         {
-            CooldownReduction(rhinoCounter);
+            StartCoroutine(Cooldown4());
         }
-        
+
         #endregion
     }
 
     #region Appel de l'invocation de l'animal
-    
+
     void Perroquet()
     {
-        SummonAnimal(prefabPerroquet, Vector3.zero, Quaternion.identity, 0.5f, new Vector2(1,1));
+        SummonAnimal(prefabPerroquet, Vector3.zero, Quaternion.identity, 0.5f, new Vector2(1, 1));
     }
 
     void Girafe()
     {
-        SummonAnimal(prefabGirafe, Vector3.zero, Quaternion.identity, 1.5f, new Vector2(1,6));
+        SummonAnimal(prefabGirafe, Vector3.zero, Quaternion.identity, 1.5f, new Vector2(1, 6));
     }
 
     void Gorille()
     {
-        SummonAnimal(prefabGorille, Vector3.zero, Quaternion.identity, 3f, new Vector2(3,3));
+        SummonAnimal(prefabGorille, Vector3.zero, Quaternion.identity, 3f, new Vector2(3, 3));
     }
 
     void Rhino()
     {
-        SummonAnimal(prefabRhino, Vector3.zero, Quaternion.identity, 2f, new Vector2(3,1));
+        SummonAnimal(prefabRhino, Vector3.zero, Quaternion.identity, 2f, new Vector2(3, 1));
     }
-    
+
     #endregion
-    
+
     #region Invocation et Destruction
-    
+
     //Invoque l'animal selon les paramètres définis
     void SummonAnimal(GameObject _animal, Vector3 _position, Quaternion _quaternion, float _time, Vector2 _size)
     {
@@ -173,14 +193,38 @@ public class AnimalAttacks : MonoBehaviour
         Destroy(summonedAnimal);
         canSummon = true;
     }
-    
-    #endregion
-    
-    #region Countdown des Cooldown
 
-    void CooldownReduction(float _animal)
+    #endregion
+
+    #region Coroutines
+    
+    IEnumerator Cooldown1()
     {
-        _animal -= Time.deltaTime;
+        cooldown1 = false;
+        perroquetCounter -= 1;
+        yield return new WaitForSeconds(1f);
+        cooldown1 = true;
+    }
+    IEnumerator Cooldown2()
+    {
+        cooldown2 = false;
+        girafeCounter -= 1;
+        yield return new WaitForSeconds(1f);
+        cooldown2 = true;
+    }
+    IEnumerator Cooldown3()
+    {
+        cooldown3 = false;
+        gorilleCounter -= 1;
+        yield return new WaitForSeconds(1f);
+        cooldown3 = true;
+    }
+    IEnumerator Cooldown4()
+    {
+        cooldown4 = false;
+        rhinoCounter -= 1;
+        yield return new WaitForSeconds(1f);
+        cooldown4 = true;
     }
     
     #endregion

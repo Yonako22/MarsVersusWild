@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -12,7 +11,7 @@ public class GameManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogWarning("STOP! Game");
+            Debug.LogError("STOP! Game");
             return;
         }
 
@@ -23,7 +22,7 @@ public class GameManager : MonoBehaviour
     {
         GridManager.instance.GenerateGrid();
         
-        wood = 10;
+        wood = 1000;
     }
 
     private void Update()
