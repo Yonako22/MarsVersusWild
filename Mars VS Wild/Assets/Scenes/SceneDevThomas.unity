@@ -155,10 +155,10 @@ RectTransform:
   m_Father: {fileID: 995123873}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -298, y: 175}
-  m_SizeDelta: {x: 18.6537, y: 18.6537}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 23, y: -71}
+  m_SizeDelta: {x: 18.653687, y: 18.653687}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8856909
 CanvasRenderer:
@@ -391,7 +391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 140, y: -33.399994}
+  m_AnchoredPosition: {x: 150, y: -36}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &605640409
@@ -561,10 +561,10 @@ RectTransform:
   m_Father: {fileID: 995123873}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -298, y: 78.90004}
-  m_SizeDelta: {x: 18.6537, y: 18.6537}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 23, y: -167.09998}
+  m_SizeDelta: {x: 18.653687, y: 18.653687}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &995123872
 GameObject:
@@ -707,7 +707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 140, y: -175.7}
+  m_AnchoredPosition: {x: 150, y: -178.29997}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1376836182
@@ -860,7 +860,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -960,10 +960,10 @@ MonoBehaviour:
   girafeImage: {fileID: 8856910}
   gorilleImage: {fileID: 2024819927}
   rhinoImage: {fileID: 624598353}
-  prefabPerroquet: {fileID: 0}
-  prefabGirafe: {fileID: 0}
-  prefabGorille: {fileID: 0}
-  prefabRhino: {fileID: 0}
+  prefabPerroquet: {fileID: 8104393745233483795, guid: 9cee6f5260e7ff54c8059d2ec262de40, type: 3}
+  prefabGirafe: {fileID: 8104393745233483795, guid: d079adf60db575045ba15a536ff49099, type: 3}
+  prefabGorille: {fileID: 8104393745233483795, guid: 4bb7241ca6a93214a88867b04e03f776, type: 3}
+  prefabRhino: {fileID: 8104393745233483795, guid: e0d9d903cf08f6f42b04d4e4f9816fcc, type: 3}
   summonedAnimal: {fileID: 0}
 --- !u!4 &1601337082
 Transform:
@@ -973,7 +973,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601337080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 150.55154, y: 523.41455, z: -24.97345}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1013,7 +1013,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 140, y: -79.600006}
+  m_AnchoredPosition: {x: 150, y: -82.19998}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1629107577
@@ -1145,10 +1145,10 @@ RectTransform:
   m_Father: {fileID: 995123873}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -298, y: 127.20003}
-  m_SizeDelta: {x: 18.6537, y: 18.6537}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 23, y: -118.79997}
+  m_SizeDelta: {x: 18.653687, y: 18.653687}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2024819926
 CanvasRenderer:
@@ -1220,10 +1220,10 @@ RectTransform:
   m_Father: {fileID: 995123873}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -298, y: 221.20001}
-  m_SizeDelta: {x: 18.6537, y: 18.6537}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 23, y: -24.799988}
+  m_SizeDelta: {x: 18.653687, y: 18.653687}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2047273736
 CanvasRenderer:
@@ -1297,7 +1297,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 140, y: -127.4}
+  m_AnchoredPosition: {x: 150, y: -129.99997}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2134524708
