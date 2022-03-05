@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 public class Shelter : Buildings
 {
-
-    public float shelterHealth = 100f;
     public Slider healthBar;
     private void Start()
     {
@@ -14,8 +12,8 @@ public class Shelter : Buildings
 
     void Update()
     {
-        
-        
+        healthBar.value = buildingHP;
+            
         if (buildingLevel == 2)
         {
            GameManager.instance.woodPerSecond = 2;
