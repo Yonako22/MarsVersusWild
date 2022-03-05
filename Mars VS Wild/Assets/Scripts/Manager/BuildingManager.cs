@@ -20,11 +20,6 @@ public class BuildingManager : MonoBehaviour
         instance = this;
     }
 
-    public void X()
-    {
-        Debug.Log(0);
-     }
-    
     public void BuildAutoTurret()
     {
         numberOfAutoTurrets++;
