@@ -25,6 +25,7 @@ public class AnimalsUnlock : MonoBehaviour
             placeToSpawn = Random.Range(0, 14);
             Instantiate(giraffe, enemiesSpawn.spawns[placeToSpawn].transform.position, Quaternion.identity);
             giraffe.GetComponent<GirafeAttack>().enabled = false;
+            giraffe.GetComponent<BoxCollider2D>().enabled = false;
             giraffe.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 150);
             giraffeUnlocked = true;
         }
@@ -34,6 +35,7 @@ public class AnimalsUnlock : MonoBehaviour
             placeToSpawn = Random.Range(0, 14);
             Instantiate(gorilla, enemiesSpawn.spawns[placeToSpawn].transform.position, Quaternion.identity);
             gorilla.GetComponent<GorilleAttack>().enabled = false;
+            gorilla.GetComponent<BoxCollider2D>().enabled = false;
             gorilla.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 150);
             gorillaUnlocked = true;
         }
@@ -43,6 +45,7 @@ public class AnimalsUnlock : MonoBehaviour
             placeToSpawn = Random.Range(0, 14);
             Instantiate(rhino, enemiesSpawn.spawns[placeToSpawn].transform.position, Quaternion.identity);
             rhino.GetComponent<RhinoAttack>().enabled = false;
+            rhino.GetComponent<BoxCollider2D>().enabled = false;
             rhino.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 150);
             gorillaUnlocked = true;
         }

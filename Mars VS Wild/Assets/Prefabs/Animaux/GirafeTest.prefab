@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3917327363710464470}
   - component: {fileID: 5373929952233052944}
   - component: {fileID: 8018084621987586708}
-  - component: {fileID: 2216102532655101849}
   - component: {fileID: -9216650883266840979}
+  - component: {fileID: 2216102532655101849}
+  - component: {fileID: 1870868332}
   m_Layer: 0
   m_Name: GirafeTest
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 76a24969b0df65948bc85c65f860779f, type: 3}
+  m_Sprite: {fileID: 4403123471519957660, guid: aeaed38b59ee76b4fa2c49489966e973, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +104,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.33, y: 3.43}
+    oldSize: {x: 1, y: 1.0000094}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -112,21 +113,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 6.008792}
   m_EdgeRadius: 0
---- !u!114 &2216102532655101849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8104393745233483795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5c22e463e24a344fb73f44def54aea7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemies: {fileID: 0}
-  enemiesHit: []
-  damage: 0
 --- !u!50 &-9216650883266840979
 Rigidbody2D:
   serializedVersion: 4
@@ -148,3 +134,39 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2216102532655101849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104393745233483795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c22e463e24a344fb73f44def54aea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: {fileID: 0}
+  enemiesHit: []
+  damage: 15
+  animator: {fileID: 0}
+  rb: {fileID: -9216650883266840979}
+--- !u!95 &1870868332
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104393745233483795}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef17ef9f00648224fb8cbfc81d4a4d0a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
