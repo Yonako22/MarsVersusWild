@@ -15,6 +15,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PerroquetAttack.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -65,7 +68,8 @@
       <option name="presentableId" value="Default" />
       <updated>1646427901685</updated>
       <workItem from="1646427913297" duration="13339000" />
-      <workItem from="1646463777869" duration="4839000" />
+      <workItem from="1646463777869" duration="6100000" />
+      <workItem from="1646473738033" duration="1953000" />
     </task>
     <servers />
   </component>
