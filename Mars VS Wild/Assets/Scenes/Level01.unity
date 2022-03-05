@@ -1353,7 +1353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildings:
   - {fileID: 4852800596033179629, guid: 984bcad33b5319b4984abcf70aa4cae7, type: 3}
-  - {fileID: 0}
+  - {fileID: 1778998561565666787, guid: aaf914274650835418baa68e090834e0, type: 3}
   - {fileID: 500392074372616780, guid: a167ee6d12e444d44b1681e6fbc144ea, type: 3}
   - {fileID: 0}
   buildingToBuild: {fileID: 0}
@@ -1563,7 +1563,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 615507892}
         m_TargetAssemblyTypeName: BuildingManager, Assembly-CSharp
-        m_MethodName: BuildLaserTurret
+        m_MethodName: setBuildLaserTurret
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1829,7 +1829,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 615507892}
         m_TargetAssemblyTypeName: BuildingManager, Assembly-CSharp
-        m_MethodName: BuildAutoTurret
+        m_MethodName: setBuildAutoTurret
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4738,7 +4738,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 615507892}
         m_TargetAssemblyTypeName: BuildingManager, Assembly-CSharp
-        m_MethodName: BuildInfirmary
+        m_MethodName: setBuildInfirmary
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5368,7 +5368,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 615507892}
         m_TargetAssemblyTypeName: BuildingManager, Assembly-CSharp
-        m_MethodName: BuildBarricades
+        m_MethodName: setBuildBarricades
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
