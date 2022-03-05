@@ -26,9 +26,9 @@ public class GameManager : MonoBehaviour
     {
         totalTime += Time.deltaTime;
 
-        if (totalTime > 0.02)
+        if (totalTime > 300)
         {
-            Debug.Log("dj");
+            Debug.Log("Victory");
         }
     }
 }
