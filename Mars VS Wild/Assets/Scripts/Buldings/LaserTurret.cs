@@ -33,6 +33,10 @@ public class LaserTurret : Buildings
     void Update()
     {
         Upgrade();
+        if (buildingHP <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private IEnumerator Shoot()
