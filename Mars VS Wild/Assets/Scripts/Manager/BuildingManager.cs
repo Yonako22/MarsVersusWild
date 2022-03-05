@@ -1,10 +1,11 @@
+using System;
 using UnityEngine;
 
 public class BuildingManager : MonoBehaviour
 {
     public static BuildingManager instance;
     public GameObject[] buildings;
-    private GameObject turretToBuild;
+    public GameObject turretToBuild;
 
     public int numberOfAutoTurrets;
     public int numberOfLaserTurrets;
@@ -18,6 +19,11 @@ public class BuildingManager : MonoBehaviour
         }
 
         instance = this;
+    }
+
+    private void Start()
+    {
+        turretToBuild = buildings[0]; // Par défaut
     }
 
     public void BuildAutoTurret()
