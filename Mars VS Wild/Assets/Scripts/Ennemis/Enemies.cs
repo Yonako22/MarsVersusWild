@@ -26,9 +26,17 @@ public class Enemies : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        buildingAttacked = other.gameObject;
+        buildings = buildingAttacked.GetComponent<Buildings>();
+        
         if (other.gameObject.CompareTag("Building"))
         {
             StartCoroutine(Attack());
+        }
+
+        if (other.gameObject.CompareTag("Shelter"))
+        {
+            StartCoroutine(AttackShelter());
         }
     }
 
@@ -36,8 +44,6 @@ public class Enemies : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Building"))
         {
-            buildingAttacked = other.gameObject;
-            buildings = buildingAttacked.GetComponent<Buildings>();
             StopCoroutine(Attack());
         }
     }
@@ -46,5 +52,12 @@ public class Enemies : MonoBehaviour
     {
         buildings.buildingHP -= damage;
         yield return new WaitForSeconds(attackCooldown);
+    }
+
+    private IEnumerator AttackShelter()
+    {
+        buildings.buildingHP -= damage;
+        Destroy(gameObject);
+        yield return new WaitForEndOfFrame();
     }
 }
