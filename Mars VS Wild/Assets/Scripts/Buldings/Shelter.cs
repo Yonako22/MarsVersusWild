@@ -1,7 +1,11 @@
+using System;
 using UnityEngine;
 
 public class Shelter : Buildings
 {
+
+    public float shelterHealth = 100f;
+    
     void Update()
     {
         if (buildingLevel == 2)
@@ -19,4 +23,7 @@ public class Shelter : Buildings
             Debug.Log("Lose");
         }
     }
+    
+    
+    
 }
