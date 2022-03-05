@@ -1,4 +1,4 @@
-using System.Management.Instrumentation;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,7 +14,16 @@ public class AnimalAttacks : MonoBehaviour
     [SerializeField] private Image gorilleImage;
     [SerializeField] private Image rhinoImage;
 
-    private int animalSlot;
+    [SerializeField] private GameObject prefabPerroquet;
+    [SerializeField] private GameObject prefabGirafe;
+    [SerializeField] private GameObject prefabGorille;
+    [SerializeField] private GameObject prefabRhino;
+
+    private int animalSlot = 4;
+
+    public GameObject summonedAnimal;
+
+    private bool canSummon = true;
     void Update()
     {
         if (Input.GetKeyDown(perroquet) || Input.GetKeyDown(girafe) || Input.GetKeyDown(gorille) ||
@@ -46,5 +55,59 @@ public class AnimalAttacks : MonoBehaviour
                 animalSlot = 3;
             }
         }
+        //Sélection de l'animal
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && animalSlot != 4 && canSummon)
+        {
+
+            if (animalSlot == 0)
+            {
+                Perroquet();
+            }
+            
+            else if (animalSlot == 1)
+            {
+                Girafe();
+            }
+            
+            else if (animalSlot == 2)
+            {
+                Gorille();
+            }
+            
+            else if (animalSlot == 3)
+            {
+                Rhino();
+            }
+        }
+    }
+
+    void Perroquet()
+    {
+        summonedAnimal = Instantiate(prefabPerroquet, Vector3.zero, Quaternion.identity);
+        StartCoroutine(DestroyAnimal(0.5f));
+        canSummon = false;
+    }
+
+    void Girafe()
+    {
+        
+    }
+
+    void Gorille()
+    {
+        
+    }
+
+    void Rhino()
+    {
+        
+    }
+
+    IEnumerator DestroyAnimal(float _time)
+    {
+        yield return new WaitForSeconds(_time);
+        Destroy(summonedAnimal);
+        canSummon = true;
     }
 }
