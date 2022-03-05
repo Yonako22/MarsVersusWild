@@ -9,11 +9,12 @@ public class TemporaryUI : MonoBehaviour
 
     public float wood;
     public float woodPerSecond = 1;
-    [SerializeField] private bool quitOptions;
+    public bool quitOptions;
     public TextMeshProUGUI woodTxt;
     [SerializeField] private bool isPaused;
     public GameObject areUSureToQuit;
     public GameObject options;
+    public GameObject pauseMenu;
     
     void Start()
     {
@@ -28,23 +29,30 @@ public class TemporaryUI : MonoBehaviour
         woodTxt.text = " " + (int)wood;
     }
 
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        pauseMenu.SetActive(false);
+    }
+    
     public void Pause()
     {
         Time.timeScale = 0f;
+        pauseMenu.SetActive(true);
     }
 
     public void Options()
     {
-        if (!quitOptions == false)
+        if (quitOptions == false)
         {
             options.SetActive(true);
-
+            quitOptions = true;
         }
         else
         {
-            
+            options.SetActive(false);
+            quitOptions = false;
         }
-        options.SetActive(true);
     }
 
     public void Quit()
@@ -56,6 +64,7 @@ public class TemporaryUI : MonoBehaviour
     {
         areUSureToQuit.SetActive(false);
     }
+    
     public void YesIWantToQuit()
     {
         SceneManager.LoadScene("MainMenuScene");
