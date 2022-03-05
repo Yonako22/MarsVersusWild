@@ -30,8 +30,9 @@ public class AnimalAttacks : MonoBehaviour
     private int animalSlot = 4; //Permet d'invoquer l'animal sélectionné
 
     private bool canSummon = true; //Empêche le spam d'animaux tant que celui d'avant est toujours actif
-    
+
     #endregion
+    
     
     void Update()
     {
@@ -119,6 +120,7 @@ public class AnimalAttacks : MonoBehaviour
     
     #endregion
 
+    
     #region Invocation et Destruction
     
     //Invoque l'animal selon les paramètres définis
