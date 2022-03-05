@@ -11,5 +11,10 @@ public class Barricade : Buildings
             buildingHP = 70;
             canBeUpgrade = false;
         }
+        
+        if (buildingHP <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

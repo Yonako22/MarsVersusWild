@@ -652,6 +652,7 @@ MonoBehaviour:
   buildingPriceLvl2: 50
   buildingPriceLvl3: 60
   buildingLevel: 1
+  shelterHealth: 100
 --- !u!61 &1457867740 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 1359750927312668793, guid: a5635f7bfeed32f4ea4dd9cef431fe09, type: 3}
