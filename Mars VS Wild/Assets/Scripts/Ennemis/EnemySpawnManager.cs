@@ -15,6 +15,7 @@ public class EnemySpawnManager : MonoBehaviour
     private int placeToSpawn;
     public float spawnCooldown;
     public List<GameObject> spawns = new List<GameObject>();
+    public GameManager gameManager;
 
     private void Start()
     {
@@ -56,34 +57,34 @@ public class EnemySpawnManager : MonoBehaviour
 
     void SpawnTime()    //Pour accélérer le spawn des ennemis quand on aura un timer
     { 
-        // if (totalTime > 12secondes)
-        // {
-        //     spawnCooldown = 2f;
-        // }
-        //
-        // if (totalTime > 30secondes)
-        // {
-        //     spawnCooldown = 2f;
-        // }
-        //
-        // if (totalTime > 1minute)
-        // {
-        //     spawnCooldown = 1.5f;
-        // }
-        //
-        // if (totalTime > 2minutes)
-        // {
-        //     spawnCooldown = 1f;
-        // }
-        //
-        // if (totalTime > 3minutes)
-        // {
-        //     spawnCooldown = 0.5f;
-        // }
-        //
-        // if (totalTime > 4minutes)
-        // {
-        //     spawnCooldown = 0.3f;
-        // }
+        if (gameManager.totalTime > 12)
+        {
+            spawnCooldown = 2f;
+        }
+        
+        if (gameManager.totalTime > 30)
+        {
+            spawnCooldown = 2f;
+        }
+        
+        if (gameManager.totalTime > 60)
+        {
+            spawnCooldown = 1.5f;
+        }
+        
+        if (gameManager.totalTime > 120)
+        {
+            spawnCooldown = 1f;
+        }
+        
+        if (gameManager.totalTime > 180)
+        {
+            spawnCooldown = 0.5f;
+        }
+        
+        if (gameManager.totalTime > 240)
+        {
+            spawnCooldown = 0.3f;
+        }
     }
 }
