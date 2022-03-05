@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PerroquetAttack : MonoBehaviour
+public class RhinoAttack : MonoBehaviour
 {
     #region Variables
     

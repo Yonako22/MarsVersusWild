@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3917327363710464470}
   - component: {fileID: 5373929952233052944}
   - component: {fileID: 8901257494624608029}
+  - component: {fileID: 1814265147531892836}
   m_Layer: 0
   m_Name: RhinoTest
   m_TagString: Untagged
@@ -110,3 +111,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0150447, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1814265147531892836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104393745233483795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50889c1501f033b4e957993dfca0c8a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

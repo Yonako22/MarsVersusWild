@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3917327363710464470}
   - component: {fileID: 5373929952233052944}
   - component: {fileID: 8018084621987586708}
+  - component: {fileID: 2216102532655101849}
   m_Layer: 0
   m_Name: GirafeTest
   m_TagString: Untagged
@@ -110,3 +111,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 6.008792}
   m_EdgeRadius: 0
+--- !u!114 &2216102532655101849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104393745233483795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c22e463e24a344fb73f44def54aea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
