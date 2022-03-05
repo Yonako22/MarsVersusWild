@@ -11,11 +11,11 @@ public class Shelter : Buildings
     {
         if (buildingLevel == 2)
         {
-            //buildingManager
+            buildingManager.woodPerSecond = 2;
         }
         if (buildingLevel == 3)
         {
-            //produire 5 ressources toutes les 2 secondes
+            buildingManager.woodPerSecond = 2.5f;
             canBeUpgrade = false;
         }
 

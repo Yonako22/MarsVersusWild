@@ -59,32 +59,32 @@ public class EnemySpawnManager : MonoBehaviour
     { 
         if (gameManager.totalTime > 12)
         {
-            spawnCooldown = 4f;
+            spawnCooldown = 6f;
         }
         
         if (gameManager.totalTime > 30)
         {
-            spawnCooldown = 3f;
+            spawnCooldown = 5f;
         }
         
         if (gameManager.totalTime > 60)
         {
-            spawnCooldown = 2f;
+            spawnCooldown = 4f;
         }
         
         if (gameManager.totalTime > 120)
         {
-            spawnCooldown = 1.5f;
+            spawnCooldown = 3f;
         }
         
         if (gameManager.totalTime > 180)
         {
-            spawnCooldown = 1f;
+            spawnCooldown = 2.5f;
         }
         
         if (gameManager.totalTime > 240)
         {
-            spawnCooldown = 0.5f;
+            spawnCooldown = 2f;
         }
     }
 }
