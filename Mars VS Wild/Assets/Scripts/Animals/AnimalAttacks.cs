@@ -1,28 +1,45 @@
-using System;
 using System.Collections;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 public class AnimalAttacks : MonoBehaviour
 {
+    public static AnimalAttacks instance;
+
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogError("Il existe deux singletons de AnimalAttacks");
+            return;
+        }
+        instance = this;
+    }
+
     #region Variables
 
-    [Header("Bindings")] [SerializeField] private KeyCode perroquet;
+    [Header("Bindings")] 
+    [SerializeField] private KeyCode perroquet;
     [SerializeField] private KeyCode girafe;
     [SerializeField] private KeyCode gorille;
     [SerializeField] private KeyCode rhino;
 
-    [Header("Images")] [SerializeField] private Image perroquetImage;
+    [Header("Images")] 
+    [SerializeField] private Image perroquetImage;
     [SerializeField] private Image girafeImage;
     [SerializeField] private Image gorilleImage;
     [SerializeField] private Image rhinoImage;
 
-    [Header("Prefabs")] [SerializeField] private GameObject prefabPerroquet;
+    [Header("Prefabs")]
+    [SerializeField] private GameObject prefabPerroquet;
     [SerializeField] private GameObject prefabGirafe;
     [SerializeField] private GameObject prefabGorille;
     [SerializeField] private GameObject prefabRhino;
 
-    [Header("Cooldowns")] public int perroquetCD;
+    [Header("Cooldowns")] 
+    public int perroquetCD;
     public int girafeCD;
     public int gorilleCD;
     public int rhinoCD;
@@ -83,25 +100,25 @@ public class AnimalAttacks : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && animalSlot != 4 && canSummon)
         {
 
-            if (animalSlot == 0 && perroquetCounter == 0)
+            if (animalSlot == 0 && perroquetCounter <= 0)
             {
                 Perroquet();
                 perroquetCounter = perroquetCD;
             }
 
-            else if (animalSlot == 1 && girafeCounter == 0)
+            else if (animalSlot == 1 && girafeCounter <= 0)
             {
                 Girafe();
                 girafeCounter = girafeCD;
             }
 
-            else if (animalSlot == 2 && gorilleCounter == 0)
+            else if (animalSlot == 2 && gorilleCounter <= 0)
             {
                 Gorille();
                 gorilleCounter = gorilleCD;
             }
 
-            else if (animalSlot == 3 && rhinoCounter == 0)
+            else if (animalSlot == 3 && rhinoCounter <= 0)
             {
                 Rhino();
                 rhinoCounter = rhinoCD;
