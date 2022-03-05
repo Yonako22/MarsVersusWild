@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Manager;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -15,6 +16,7 @@ public class AnimalsUnlock : MonoBehaviour
     public GameObject giraffe;
     public GameObject gorilla;
     public GameObject rhino;
+    public UIManager ui;
 
     void Update()
     {
@@ -51,16 +53,19 @@ public class AnimalsUnlock : MonoBehaviour
         if (giraffeUnlocked && col.gameObject.CompareTag("Shelter"))
         {
             //Déverrouiller la girafe dans le menu puis détruire le gameobject
+            ui.GirafAvailable = true;
         }
         
         if (gorillaUnlocked && col.gameObject.CompareTag("Shelter"))
         {
             //Déverrouiller le gorille dans le menu puis détruire le gameobject
+            ui.monkeyAvailable = true;
         }
         
         if (rhinoUnlocked && col.gameObject.CompareTag("Shelter"))
         {
             //Déverrouiller le gorille dans le menu puis détruire le gameobject
+            ui.rhinoAvailable = true;
         }
     }
 }

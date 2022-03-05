@@ -526,6 +526,7 @@ GameObject:
   - component: {fileID: 258874108}
   - component: {fileID: 258874107}
   - component: {fileID: 258874106}
+  - component: {fileID: 258874110}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -621,6 +622,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &258874110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258874105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7315d6f9b12b14caa3280106905b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wood: 0
+  woodPerSecond: 1
+  quitOptions: 0
+  woodTxt: {fileID: 1964132048}
+  isPaused: 0
+  areUSureToQuit: {fileID: 2033509017}
+  options: {fileID: 1387108478}
+  pauseMenu: {fileID: 1937063639}
+  monkeyAvailable: 0
+  rhinoAvailable: 0
+  parrotAvailable: 0
+  GirafAvailable: 0
 --- !u!1 &296149227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,8 +1072,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2130203208}
-        m_TargetAssemblyTypeName: TemporaryUI, Assembly-CSharp
+      - m_Target: {fileID: 258874110}
+        m_TargetAssemblyTypeName: Manager.UIManager, Assembly-CSharp
         m_MethodName: YesIWantToQuit
         m_Mode: 1
         m_Arguments:
@@ -1366,8 +1391,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2130203208}
-        m_TargetAssemblyTypeName: TemporaryUI, Assembly-CSharp
+      - m_Target: {fileID: 258874110}
+        m_TargetAssemblyTypeName: Manager.UIManager, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -2557,8 +2582,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2130203208}
-        m_TargetAssemblyTypeName: TemporaryUI, Assembly-CSharp
+      - m_Target: {fileID: 258874110}
+        m_TargetAssemblyTypeName: Manager.UIManager, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -3041,7 +3066,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 11.299988, y: -9}
+  m_AnchoredPosition: {x: 11.300049, y: -9}
   m_SizeDelta: {x: 60, y: 45}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1329280894
@@ -3132,7 +3157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3648,8 +3673,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28, y: 0}
-  m_SizeDelta: {x: 338.2, y: 64.2}
+  m_AnchoredPosition: {x: 33.02, y: -0.5}
+  m_SizeDelta: {x: 346.85, y: 72.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1497946898
 MonoBehaviour:
@@ -3672,7 +3697,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.8396226, g: 0.11485406, b: 0.11485406, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -3696,9 +3721,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4113,8 +4138,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2130203208}
-        m_TargetAssemblyTypeName: TemporaryUI, Assembly-CSharp
+      - m_Target: {fileID: 258874110}
+        m_TargetAssemblyTypeName: Manager.UIManager, Assembly-CSharp
         m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
@@ -4329,7 +4354,7 @@ GameObject:
   - component: {fileID: 1686531006}
   - component: {fileID: 1686531005}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ShelterHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4350,9 +4375,9 @@ RectTransform:
   m_Father: {fileID: 258874109}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 40, y: -192}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 56.2, y: 27.04004}
   m_SizeDelta: {x: 400, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1686531005
@@ -4584,7 +4609,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.89, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1817038595
@@ -4600,14 +4625,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6392157, g: 0.121568635, b: 0.20000002, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4616,7 +4641,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2.08
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1817038596
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5037,10 +5062,10 @@ RectTransform:
   m_Father: {fileID: 258874109}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -277, y: 193.386}
-  m_SizeDelta: {x: 83.712, y: 15.748}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 114.619995, y: -25.099976}
+  m_SizeDelta: {x: 83.712006, y: 15.748001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1964132048
 MonoBehaviour:
@@ -5315,8 +5340,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2130203208}
-        m_TargetAssemblyTypeName: TemporaryUI, Assembly-CSharp
+      - m_Target: {fileID: 258874110}
+        m_TargetAssemblyTypeName: Manager.UIManager, Assembly-CSharp
         m_MethodName: NoIDontWantToQuit
         m_Mode: 1
         m_Arguments:
@@ -5691,8 +5716,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2130203208}
-        m_TargetAssemblyTypeName: TemporaryUI, Assembly-CSharp
+      - m_Target: {fileID: 258874110}
+        m_TargetAssemblyTypeName: Manager.UIManager, Assembly-CSharp
         m_MethodName: Options
         m_Mode: 1
         m_Arguments:
@@ -5827,7 +5852,6 @@ GameObject:
   - component: {fileID: 2130203205}
   - component: {fileID: 2130203207}
   - component: {fileID: 2130203206}
-  - component: {fileID: 2130203208}
   m_Layer: 5
   m_Name: ZoneBlancheNul
   m_TagString: Untagged
@@ -5892,23 +5916,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130203204}
   m_CullTransparentMesh: 1
---- !u!114 &2130203208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130203204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c7315d6f9b12b14caa3280106905b5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wood: 0
-  woodPerSecond: 1
-  quitOptions: 0
-  woodTxt: {fileID: 1964132048}
-  isPaused: 0
-  areUSureToQuit: {fileID: 2033509017}
-  options: {fileID: 1387108478}
-  pauseMenu: {fileID: 1937063639}
