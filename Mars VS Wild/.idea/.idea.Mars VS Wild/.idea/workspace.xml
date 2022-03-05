@@ -15,6 +15,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buldings/Barricade.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -63,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1646427901685</updated>
       <workItem from="1646427913297" duration="13807000" />
-      <workItem from="1646474420051" duration="1582000" />
+      <workItem from="1646474420051" duration="2215000" />
     </task>
     <servers />
   </component>

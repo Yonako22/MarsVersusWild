@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class Barricade : Buildings
 {
-    void Start()
-    {
-        
-    }
-    
     void Update()
     {
         if (buildingLevel == 2)
@@ -20,6 +15,5 @@ public class Barricade : Buildings
             buildingHP = 70;
             canBeUpgrade = false;
         }
-        
     }
 }
