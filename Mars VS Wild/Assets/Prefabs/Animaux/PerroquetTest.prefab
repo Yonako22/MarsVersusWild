@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5373929952233052944}
   - component: {fileID: 8330038280451565509}
   - component: {fileID: 6628577774919537768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PerroquetTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,3 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67628069bbac40247a14eb11baa6d252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemies: {fileID: 0}
+  enemiesHit: []
+  damage: 0

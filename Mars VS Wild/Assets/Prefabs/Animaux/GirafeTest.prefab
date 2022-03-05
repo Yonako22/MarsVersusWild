@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5373929952233052944}
   - component: {fileID: 8018084621987586708}
   - component: {fileID: 2216102532655101849}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GirafeTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,3 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c22e463e24a344fb73f44def54aea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemies: {fileID: 0}
+  enemiesHit: []
+  damage: 0
