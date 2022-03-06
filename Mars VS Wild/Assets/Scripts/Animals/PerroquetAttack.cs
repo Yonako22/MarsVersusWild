@@ -1,28 +1,50 @@
-using System.Collections.Generic;
+using System.Collections;
+using Manager;
 using UnityEngine;
 
-public class PerroquetAttack : MonoBehaviour
+namespace Animals
 {
-    #region Variables
-    
-    public Enemies enemies; //Script des ennemis
-
-    [SerializeField] private List<GameObject> enemiesHit = new List<GameObject>(); //Stocke les ennemis déjà touchés
-
-    [SerializeField] private int damage; //Dégâts de l'animal
-    
-    #endregion
-    
-    private void OnTriggerStay2D(Collider2D other)
+    public class PerroquetAttack : MonoBehaviour
     {
-        if (other.CompareTag("Enemy") && !enemiesHit.Contains(other.gameObject))
+        #region Variables
+        [SerializeField] private int damage; //Dégâts de l'animal
+        public Animator animator;
+        public Rigidbody2D rb;
+        public BoxCollider2D bc;
+        private int placeToGo;
+        public AnimalsUnlock animalsUnlock;
+        public UIManager ui;
+    
+        #endregion
+        
+        private void Start()
         {
-            //enemies = other.gameObject.GetComponent<Enemies>();
-            //enemies.hp -= damage;
-            enemiesHit.Add(other.gameObject);
-            Debug.Log("Dégâts");
+            animalsUnlock = GameObject.Find("GameManager").GetComponent<AnimalsUnlock>();
+            ui = GameObject.Find("UI").GetComponent<UIManager>();
+            StartCoroutine(Attack());
+        }
+       
+        private IEnumerator Attack()
+        {
+            animator.SetBool("Attacking", true);
+            yield return new WaitForSeconds(0.66f);
+            animator.SetBool("Attacking", false);
+            placeToGo = Random.Range(0, 13);
+            bc.enabled = false;
+            rb.velocity = new Vector2(1 * animalsUnlock.enemiesSpawn.spawns[placeToGo].transform.position.x,
+                 1* animalsUnlock.enemiesSpawn.spawns[placeToGo].transform.position.y);
+            
+            Destroy(gameObject, (5));
+            yield return new WaitForEndOfFrame();
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("Enemy"))
+            {
+                Debug.Log("hit");
+                other.gameObject.GetComponent<Enemies>().hp -= damage;
+            }
         }
     }
-    
-    //Les ennemis doivent avoir un BoxCollider2D, un Rigidbody2D et avoir le Tag "Enemy"
 }
