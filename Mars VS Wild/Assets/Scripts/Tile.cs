@@ -30,36 +30,37 @@ public class Tile : MonoBehaviour
 
             if (GameManager.instance.gonnaUpgrade)
             {
-                buildingScript = building.GetComponent<Buildings>();
-
-                if (building != null && buildingScript.canBeUpgrade)
+                if (building != null)
                 {
-                    
-                    if (building.gameObject.GetComponent<Buildings>().buildingLevel == 1)
+                    buildingScript = building.GetComponent<Buildings>();
+
+                    if (buildingScript.canBeUpgrade)
                     {
-                        if (GameManager.instance.wood >= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl2)
+                        if (building.gameObject.GetComponent<Buildings>().buildingLevel == 1)
                         {
-                            GameManager.instance.wood -= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl2;
-                            buildingScript.buildingLevel +=1;
-                        }
-                    }
-                    if (building.gameObject.GetComponent<Buildings>().buildingLevel == 2)
-                    {
-                        if (GameManager.instance.wood >= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl3)
+                            if (GameManager.instance.wood >= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl2) 
+                            {
+                                GameManager.instance.wood -= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl2;
+                                buildingScript.buildingLevel +=1;
+                            }
+                        } 
+                        if (building.gameObject.GetComponent<Buildings>().buildingLevel == 2)
+                        { 
+                            if (GameManager.instance.wood >= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl3) 
+                            {
+                         
+                                GameManager.instance.wood -= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl3; buildingScript.buildingLevel +=1;
+                            }
+                        } 
+                        if (building.gameObject.GetComponent<Buildings>().buildingLevel == 3)
                         {
-                            GameManager.instance.wood -= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl3;
-                            buildingScript.buildingLevel +=1;
+                            Debug.Log("Reach max upgrade");
                         }
-                    }
-                    if (building.gameObject.GetComponent<Buildings>().buildingLevel == 3)
-                    {
-                      Debug.Log("Reach max upgrade");
                     }
                 }
             }
-            if (GameManager.instance.gonnaBuild)
+            else if (GameManager.instance.gonnaBuild)
             {
-                
                 if (building != null)
                 {
                     Debug.Log("Impossible de construire ici, il y a déjà une tourelle.");
@@ -78,12 +79,11 @@ public class Tile : MonoBehaviour
                     }
                 }
             }
-
-            if (GameManager.instance.gonnaSpawn)
+            else if (GameManager.instance.gonnaSpawn)
             {
                 GameObject animalToSpawn = AnimalManager.instance.GetAnimalToSpawn();
-                
                 animal = Instantiate(animalToSpawn, transform.position, quaternion.identity);
+                GameManager.instance.gonnaSpawn = false;
             }
         }
     }

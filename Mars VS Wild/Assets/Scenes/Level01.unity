@@ -1225,7 +1225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d7081adc34ba44e9c9b4d52149a409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalsUnlock: {fileID: 0}
+  animalsUnlock: {fileID: 246367988}
   animalToSpawn: {fileID: 0}
   perroquet: 97
   girafe: 122
@@ -2870,7 +2870,7 @@ MonoBehaviour:
   - {fileID: 4852800596033179629, guid: 984bcad33b5319b4984abcf70aa4cae7, type: 3}
   - {fileID: 1778998561565666787, guid: aaf914274650835418baa68e090834e0, type: 3}
   - {fileID: 500392074372616780, guid: a167ee6d12e444d44b1681e6fbc144ea, type: 3}
-  - {fileID: 6348146088805715395, guid: d6c0ab39d09d6c443a6062385bd02f60, type: 3}
+  - {fileID: 1156956111173000758, guid: ae8ab30af6f2974428dcb1bbfebcc1f5, type: 3}
   buildingToBuild: {fileID: 0}
   numberOfAutoTurrets: 0
   numberOfLaserTurrets: 0

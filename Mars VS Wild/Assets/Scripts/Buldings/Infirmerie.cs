@@ -1,13 +1,9 @@
-using UnityEngine;
-
 public class Infirmerie : Buildings
 {
     //Variables déjà serializé dans les class parent.
     // public int buildingHP;
     // public int buildingLevel = 1;
-
-    public ParticleSystem particle;
-
+    
     public int bonus1 = 2;
     public int bonus2;
     public int bonus3;
@@ -32,12 +28,6 @@ public class Infirmerie : Buildings
         Upgrade();
         if (buildingHP <= 0)
         {
-            #region Particle System
-
-            particle.BuildingDestroyed();   
-
-            #endregion
-            
             #region RemoveTotalBonus
             AnimalManager.instance.perroquetCD += bonusTotal;
             AnimalManager.instance.perroquetCounter += bonusTotal;
@@ -54,10 +44,6 @@ public class Infirmerie : Buildings
 
     private void Upgrade()
     {
-        GetComponent <UnityEngine.ParticleSystem>().Play ();
-        UnityEngine.ParticleSystem.EmissionModule em = GetComponent<UnityEngine.ParticleSystem>().emission;
-        em.enabled = true;
-
         if (buildingLevel == 1 && !hasUpgraded1)
         {
             #region bonus1
@@ -90,7 +76,6 @@ public class Infirmerie : Buildings
             #endregion
 
             bonusTotal += bonus2;
-
             hasUpgraded2 = true;
         }
         if (buildingLevel == 3 && !hasUpgraded3)
@@ -107,7 +92,6 @@ public class Infirmerie : Buildings
             #endregion
 
             bonusTotal += bonus3;
-
             hasUpgraded3 = true;
         }
     }
