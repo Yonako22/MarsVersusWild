@@ -181,7 +181,7 @@ MonoBehaviour:
   _baselvl3: {fileID: -2384488492045929358, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
   _canonLvl2: {fileID: -2042108770750229813, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
   _canonLvl3: {fileID: 990617300709623052, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
-  range: 1.5
+  range: 2.5
 --- !u!61 &-3671316359095490778
 BoxCollider2D:
   m_ObjectHideFlags: 0

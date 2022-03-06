@@ -6,6 +6,7 @@ public class LaserTurret : Buildings
 {
     public float damage;
     public GameObject laser;
+    private bool laserTurretDestroyed;
     
     private GameObject laser1;
     private GameObject laser2;
@@ -40,26 +41,30 @@ public class LaserTurret : Buildings
     
     void Update()
     {
-        Upgrade();
         if (buildingHP <= 0)
         {
+            laserTurretDestroyed = true;
             Destroy(gameObject);
         }
+        Upgrade();
     }
 
     private IEnumerator Shoot()
     {
-        yield return new WaitForSeconds(shootingCooldown);
-        laser1.SetActive(true);
-        laser2.SetActive(true);
-        laser3.SetActive(true);
-        laser4.SetActive(true);
-        yield return new WaitForSeconds(1);
-        laser1.SetActive(false);
-        laser2.SetActive(false);
-        laser3.SetActive(false);
-        laser4.SetActive(false);
-        StartCoroutine(Shoot());
+        if (!laserTurretDestroyed)
+        {
+              yield return new WaitForSeconds(shootingCooldown);
+              laser1.SetActive(true);
+              laser2.SetActive(true);
+              laser3.SetActive(true);
+              laser4.SetActive(true);
+              yield return new WaitForSeconds(1);
+              laser1.SetActive(false);
+              laser2.SetActive(false);
+              laser3.SetActive(false);
+              laser4.SetActive(false);
+              StartCoroutine(Shoot());
+        }
     }
     
     private void Upgrade()
