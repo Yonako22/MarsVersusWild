@@ -11,7 +11,6 @@ public class Enemies : MonoBehaviour
     public GameObject buildingAttacked;
     private Buildings buildings;
 
-
     private void Update()
     {
         rb.velocity = new Vector2(0, -(speed * Time.deltaTime));
@@ -19,6 +18,7 @@ public class Enemies : MonoBehaviour
         if (hp <= 0)
         {
             Destroy(gameObject);
+            GameManager.instance.wood += 1;
         }
     }
 
