@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &106672928
 Transform:
   m_ObjectHideFlags: 0
@@ -4930,7 +4930,7 @@ MonoBehaviour:
   - {x: 0.1377027, y: -0.3792389, z: 0}
   m_ShapePathHash: 1399307543
   m_Mesh: {fileID: 0}
-  m_InstanceId: -189340
+  m_InstanceId: -1306884
 --- !u!1 &8104393745233483795
 GameObject:
   m_ObjectHideFlags: 0
@@ -5102,5 +5102,6 @@ MonoBehaviour:
   animator: {fileID: 1735004824}
   rb: {fileID: -3335234351507833445}
   bc: {fileID: 8330038280451565509}
+  spinning: {fileID: 106672925}
   animalsUnlock: {fileID: 0}
   ui: {fileID: 0}

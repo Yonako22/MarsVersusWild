@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3099661166743922228
 Transform:
   m_ObjectHideFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3099661166743922233}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.018749237, y: 3.0891798, z: -0.52251166}
+  m_LocalPosition: {x: -0.018749237, y: 3.0891798, z: 0}
   m_LocalScale: {x: 1.3814592, y: 0.74272, z: 0.74272}
   m_Children: []
   m_Father: {fileID: 3099661168428445307}
@@ -4899,7 +4899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3099661168194862647
 Transform:
   m_ObjectHideFlags: 0
@@ -4908,7 +4908,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3099661168194862648}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.08125067, y: 2.3191798, z: 0.47244835}
+  m_LocalPosition: {x: 0, y: 1.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3099661168428445307}
@@ -4987,7 +4987,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 1
+  moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -9706,7 +9706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3099661168428445307}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rhino
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9743,8 +9743,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1228268588, guid: e0d9d903cf08f6f42b04d4e4f9816fcc, type: 3}
       propertyPath: m_InstanceId
-      value: -138352
+      value: -1330092
       objectReference: {fileID: 0}
+    - target: {fileID: 1814265147531892836, guid: e0d9d903cf08f6f42b04d4e4f9816fcc, type: 3}
+      propertyPath: dash
+      value: 
+      objectReference: {fileID: 3099661166743922233}
+    - target: {fileID: 1814265147531892836, guid: e0d9d903cf08f6f42b04d4e4f9816fcc, type: 3}
+      propertyPath: dash2
+      value: 
+      objectReference: {fileID: 3099661168194862648}
     - target: {fileID: 3917327363710464470, guid: e0d9d903cf08f6f42b04d4e4f9816fcc, type: 3}
       propertyPath: m_RootOrder
       value: 2

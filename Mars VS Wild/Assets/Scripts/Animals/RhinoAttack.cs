@@ -11,9 +11,11 @@ namespace Animals
         public Animator animator;
         public Rigidbody2D rb;
         public BoxCollider2D bc;
+        public GameObject dash;
+        public GameObject dash2;
         public AnimalsUnlock animalsUnlock;
         public UIManager ui;
-    
+
         #endregion
 
 
@@ -21,11 +23,15 @@ namespace Animals
         {
             animalsUnlock = GameObject.Find("AnimalManager").GetComponent<AnimalsUnlock>();
             ui = GameObject.Find("UI").GetComponent<UIManager>();
+            dash.SetActive(false);
+            dash2.SetActive(false);
             StartCoroutine(Attack());
         }
         
          private void Update()
          {
+             dash.transform.position = new Vector2(transform.position.x, transform.position.y + 1);
+             dash2.transform.position = transform.position;
              if (animalsUnlock.rhinoSpawned)
              {
                  FirstSpawn();
@@ -44,7 +50,10 @@ namespace Animals
                 animator.SetBool("Attacking", true);
                 bc.enabled = false;
                 rb.AddForce(new Vector2(0, -12f), ForceMode2D.Force);
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(0.7f);
+                dash2.SetActive(true);
+                yield return new WaitForSeconds(0.3f);
+                dash.SetActive(true);
                 bc.enabled = true;
                 rb.velocity = new Vector2(0, 10);
                 Destroy(gameObject, 5);

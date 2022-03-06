@@ -60,6 +60,11 @@ public class MainMenuManager : MonoBehaviour
 
     public void Update()
     {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            settingsMenu.SetActive(true);
+        }
+        
         if (sun)
         {
             sunButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
