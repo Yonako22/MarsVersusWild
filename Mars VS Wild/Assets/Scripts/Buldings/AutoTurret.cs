@@ -73,14 +73,15 @@ public class AutoTurret : Buildings
     
     void Shoot()
     {
+        Debug.Log("shoot");
         GameObject bulletGO = (GameObject) Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        /*Bullet bullet = bulletGO.GetComponent<Bullet>();
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
 
         if (bullet != null)
         {
             bullet.Seek(target);
         }
-        */
+        
     }
 
     void OnDrawGizmos()
