@@ -26,12 +26,6 @@ public class AnimalAttacks : MonoBehaviour
     [SerializeField] private KeyCode gorille;
     [SerializeField] private KeyCode rhino;
 
-    [Header("Images")] 
-    [SerializeField] private Image perroquetImage;
-    [SerializeField] private Image girafeImage;
-    [SerializeField] private Image gorilleImage;
-    [SerializeField] private Image rhinoImage;
-
     [Header("Prefabs")]
     [SerializeField] private GameObject prefabPerroquet;
     [SerializeField] private GameObject prefabGirafe;
@@ -69,29 +63,23 @@ public class AnimalAttacks : MonoBehaviour
         if (Input.GetKeyDown(perroquet) || Input.GetKeyDown(girafe) || Input.GetKeyDown(gorille) ||
             Input.GetKeyDown(rhino))
         {
-            perroquetImage.color = girafeImage.color = gorilleImage.color = rhinoImage.color = Color.white;
-
             if (Input.GetKeyDown(perroquet))
             {
-                perroquetImage.color = Color.green;
                 animalSlot = 0;
             }
 
             if (Input.GetKeyDown(girafe))
             {
-                girafeImage.color = Color.green;
                 animalSlot = 1;
             }
 
             if (Input.GetKeyDown(gorille))
             {
-                gorilleImage.color = Color.green;
                 animalSlot = 2;
             }
 
             if (Input.GetKeyDown(rhino))
             {
-                rhinoImage.color = Color.green;
                 animalSlot = 3;
             }
         }
