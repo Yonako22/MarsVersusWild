@@ -192,14 +192,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4b9d53d54b0ff24c95adb6109971cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingHP: 0
+  buildingHP: 30
   col: {fileID: -6964458219944899225}
   canBeUpgrade: 0
   buildingPriceLvl1: 20
   buildingPriceLvl2: 30
   buildingPriceLvl3: 30
   buildingLevel: 0
-  damage: 0
+  damage: 10
   laser: {fileID: 5136975774199139116, guid: a086bc63db9ea5440ad1c34f55050cae, type: 3}
   cannon1: {fileID: 1778998561055194789}
   cannon2: {fileID: 1778998562910217982}
@@ -219,7 +219,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.006088555, y: -0.008117974}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -230,7 +230,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8254627, y: 0.79704964}
   m_EdgeRadius: 0
 --- !u!114 &2347565322087693477
 MonoBehaviour:
@@ -257,7 +257,7 @@ MonoBehaviour:
   - {x: 0.2434361, y: -0.23515987, z: 0}
   m_ShapePathHash: 921504941
   m_Mesh: {fileID: 0}
-  m_InstanceId: -120650
+  m_InstanceId: 27816
 --- !u!1 &1778998562910217982
 GameObject:
   m_ObjectHideFlags: 0
