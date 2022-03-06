@@ -34,7 +34,7 @@ public class Enemies : MonoBehaviour
 
         if (other.gameObject.CompareTag("Shelter"))
         {
-            StartCoroutine(AttackShelter());
+            AttackShelter();
         }
     }
 
@@ -53,10 +53,9 @@ public class Enemies : MonoBehaviour
         StartCoroutine(Attack());
     }
 
-    private IEnumerator AttackShelter()
+    private void AttackShelter()
     {
         buildings.buildingHP -= damage;
         Destroy(gameObject);
-        yield return new WaitForEndOfFrame();
     }
 }
