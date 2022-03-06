@@ -12,15 +12,15 @@ namespace Animals
         public Rigidbody2D rb;
         public BoxCollider2D bc;
         public AnimalsUnlock animalsUnlock;
-        public UIManager ui;
+        public UIManager uiManager;
     
         #endregion
 
 
         private void Start()
         {
-            animalsUnlock = GameObject.Find("GameManager").GetComponent<AnimalsUnlock>();
-            ui = GameObject.Find("UI").GetComponent<UIManager>();
+            animalsUnlock = GameObject.Find("AnimalManager").GetComponent<AnimalsUnlock>();
+            uiManager = GameObject.Find("UI").GetComponent<UIManager>();
             StartCoroutine(Attack());
         }
         
@@ -56,13 +56,11 @@ namespace Animals
             {
                 animalsUnlock.giraffeSpawned = false;
                 animalsUnlock.giraffeUnlocked = true;
-                ui.GirafAvailable = true;
                 Destroy(gameObject);
             }
 
             if (animalsUnlock.giraffeUnlocked && other.gameObject.CompareTag("Enemy"))
             {
-                Debug.Log("hit");
                 other.gameObject.GetComponent<Enemies>().hp -= damage;
                 other.transform.position = new Vector2(other.transform.position.x, other.transform.position.y + 2);
             }

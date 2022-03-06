@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
     
     public float wood;
     public float woodPerSecond = 1;
+    
+    public bool gonnaBuild;
+    public bool gonnaSpawn;
+    
     private void Awake()
     {
         if (instance != null)
@@ -22,7 +26,7 @@ public class GameManager : MonoBehaviour
     {
         GridManager.instance.GenerateGrid();
         
-        wood = 1000;
+        wood = 10;
     }
 
     private void Update()

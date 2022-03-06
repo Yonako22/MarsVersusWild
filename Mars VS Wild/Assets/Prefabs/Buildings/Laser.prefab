@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5136975774199139119}
   - component: {fileID: 295926033553756431}
   - component: {fileID: -5124758936664143604}
+  - component: {fileID: 7062743658377255314}
+  - component: {fileID: 1001545552}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -124,4 +126,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserTurret: {fileID: 1778998561565666787, guid: aaf914274650835418baa68e090834e0, type: 3}
-  laserTurretScript: {fileID: 0}
+--- !u!111 &7062743658377255314
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5136975774199139116}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 05a27bf5080eead45a7da55c4873393e, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &1001545552
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5136975774199139116}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7b7ac656cb7c93e4ca503875cce0082d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
