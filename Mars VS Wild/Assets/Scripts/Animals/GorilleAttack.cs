@@ -13,6 +13,10 @@ namespace Animals
         public Animator animator;
         public Rigidbody2D rb;
         public BoxCollider2D bc;
+        public GameObject boom;
+        public GameObject boom2;
+        public GameObject boom3;
+        public GameObject boom4;
         public AnimalsUnlock animalsUnlock;
         public UIManager uiManager;
 
@@ -23,6 +27,10 @@ namespace Animals
         {
             animalsUnlock = GameObject.Find("AnimalManager").GetComponent<AnimalsUnlock>();
             uiManager = GameObject.Find("UI").GetComponent<UIManager>();
+            boom.SetActive(false);
+            boom2.SetActive(false);
+            boom3.SetActive(false);
+            boom4.SetActive(false);
             StartCoroutine(Attack());
         }
 
@@ -44,22 +52,26 @@ namespace Animals
         {
             if (animalsUnlock.gorillaUnlocked)
             {
+                boom.SetActive(true);
                 bc.size = new Vector2(3, 3);
                 animator.SetBool("Attacking", true);
                 rb.velocity = new Vector2(3, 3);
                 yield return new WaitForSeconds(0.1f);
                 bc.enabled = false;
                 yield return new WaitForSeconds(0.6f);
+                boom2.SetActive(true);
                 bc.enabled = true;
                 rb.velocity = new Vector2(-3, 3);
                 yield return new WaitForSeconds(0.1f);
                 bc.enabled = false;
                 yield return new WaitForSeconds(0.6f);
+                boom3.SetActive(true);
                 bc.enabled = true;
                 rb.velocity = new Vector2(3, 3);
                 yield return new WaitForSeconds(0.1f);
                 bc.enabled = false;
                 yield return new WaitForSeconds(0.6f);
+                boom4.SetActive(true);
                 bc.enabled = true;
                 rb.velocity = new Vector2(-3, 3);
                 yield return new WaitForSeconds(0.1f);

@@ -12,6 +12,7 @@ namespace Animals
         public Rigidbody2D rb;
         public BoxCollider2D bc;
         private int placeToGo;
+        public GameObject spinning;
         public AnimalsUnlock animalsUnlock;
         public UIManager ui;
     
@@ -29,6 +30,7 @@ namespace Animals
             animator.SetBool("Attacking", true);
             yield return new WaitForSeconds(0.66f);
             animator.SetBool("Attacking", false);
+            spinning.SetActive(false);
             placeToGo = Random.Range(0, 13);
             bc.enabled = false;
             rb.velocity = new Vector2(0.8f * animalsUnlock.enemiesSpawn.spawns[placeToGo].transform.position.x,
