@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4938082152908717450}
   - component: {fileID: 4451292863870313305}
   m_Layer: 0
-  m_Name: Sprites
+  m_Name: CanonSprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,7 +167,6 @@ MonoBehaviour:
   buildingPriceLvl2: 15
   buildingPriceLvl3: 15
   buildingLevel: 1
-  attackDamage: 5
   fireRateLvl1: 1.6
   fireRateLvl2: 2.1
   fireRateLvl3: 2.6
@@ -176,6 +175,12 @@ MonoBehaviour:
   partToRotate: {fileID: 5887548314877768228}
   turnSpeed: 5
   target: {fileID: 0}
+  _base: {fileID: 154515165088125832}
+  _cannon: {fileID: 4451292863870313305}
+  _baselvl2: {fileID: 7386226541962653550, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
+  _baselvl3: {fileID: -2384488492045929358, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
+  _canonLvl2: {fileID: -2042108770750229813, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
+  _canonLvl3: {fileID: 990617300709623052, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
   range: 1.5
 --- !u!61 &-3671316359095490778
 BoxCollider2D:
@@ -228,7 +233,7 @@ MonoBehaviour:
   - {x: 0.34299314, y: -0.21542501, z: 0}
   m_ShapePathHash: 1238175717
   m_Mesh: {fileID: 0}
-  m_InstanceId: 58652
+  m_InstanceId: 88692
 --- !u!1 &7126740063667600658
 GameObject:
   m_ObjectHideFlags: 0

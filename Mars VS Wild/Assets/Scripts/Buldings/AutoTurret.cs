@@ -15,7 +15,16 @@ public class AutoTurret : Buildings
     [SerializeField] float turnSpeed;
     
     [SerializeField] Transform target;
-    
+
+    public SpriteRenderer _base;
+    public SpriteRenderer _cannon;
+
+    public Sprite _baselvl2;
+    public Sprite _baselvl3;
+
+    public Sprite _canonLvl2;
+    public Sprite _canonLvl3;
+
     public float range;
 
     private void Start()
@@ -50,6 +59,19 @@ public class AutoTurret : Buildings
     }
     private void Update()
     {
+        if (buildingLevel ==2)
+        {
+            _base.sprite = _baselvl2;
+            _cannon.sprite = _canonLvl2;
+        }
+
+        if (buildingLevel ==3)
+        {
+            _base.sprite = _baselvl3;
+            _cannon.sprite = _canonLvl3;
+        }
+        
+        
         if(target == null)
         {
            return; 
@@ -63,7 +85,18 @@ public class AutoTurret : Buildings
        if(fireCountdown <= 0f)
        {
            Shoot();
-           fireCountdown = 1 / fireRateLvl1;
+           if (buildingLevel ==1)
+           {
+               fireCountdown = 1 / fireRateLvl1;
+           }
+           if (buildingLevel ==2)
+           {
+               fireCountdown = 1 / fireRateLvl2;
+           }
+           if (buildingLevel ==3)
+           {
+               fireCountdown = 1 / fireRateLvl3;
+           }
        }
 
        fireCountdown -= Time.deltaTime;
