@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5afaa68e5b4d04fbaa82d0737c14f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 15
   animator: {fileID: 122516903}
   rb: {fileID: 4576258117201387682}
   bc: {fileID: 8701044511157764316}

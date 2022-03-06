@@ -83,7 +83,7 @@ public class AnimalAttacks : MonoBehaviour
                 animalSlot = 3;
             }
         }
-
+        
         //Choix de l'animal sélectionné
         if (Input.GetKeyDown(KeyCode.Mouse0) && animalSlot != 4 && canSummon)
         {
@@ -216,4 +216,25 @@ public class AnimalAttacks : MonoBehaviour
     }
     
     #endregion
+    
+    #region UI Animals
+
+    public void uiParrot()
+    {
+        animalSlot = 0;
+    }
+    public void uiGirafe()
+    {
+        animalSlot = 1;
+    }
+    public void uiGorilla()
+    {
+        animalSlot = 2;
+    }
+    public void uiRhino()
+    {
+        animalSlot = 3;
+    }
+    #endregion
+
 }

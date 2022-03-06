@@ -3,11 +3,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-    public AudioMixer audioMixer;
-
     [Header("Resolution")]
     
     private Resolution[] resolutions;
@@ -46,7 +45,7 @@ public class MainMenuManager : MonoBehaviour
     
     public void StartGame()
     {
-        Debug.Log("Start");
+        SceneManager.LoadScene("Level01");
     }
 
     public void Rules()
@@ -76,12 +75,7 @@ public class MainMenuManager : MonoBehaviour
     #endregion
     
     #region Settings
-
-    public void SetVolume(float _volume) // Volume
-    {
-        audioMixer.SetFloat("Volume", _volume);
-    }
-
+    
     public void SetFullScreen(bool _isFullScreen)
     {
         Screen.fullScreen = _isFullScreen;
