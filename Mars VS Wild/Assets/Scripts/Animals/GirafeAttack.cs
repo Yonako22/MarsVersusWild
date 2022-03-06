@@ -11,7 +11,6 @@ namespace Animals
         public Animator animator;
         public Rigidbody2D rb;
         public BoxCollider2D bc;
-        
         public AnimalsUnlock animalsUnlock;
         public UIManager ui;
     
