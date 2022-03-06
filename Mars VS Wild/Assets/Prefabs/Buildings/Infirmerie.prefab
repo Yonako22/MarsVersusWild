@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3375689405544076665}
   - component: {fileID: 45276307142602125}
-  - component: {fileID: 34786718403634116}
   - component: {fileID: 7991550196402923499}
   - component: {fileID: -544909268163165424}
   m_Layer: 0
@@ -86,29 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &34786718403634116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6348146088805715395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13a8a5722434a844db53f0462bbf0a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildingHP: 0
-  col: {fileID: 0}
-  canBeUpgrade: 0
-  buildingPriceLvl1: 0
-  buildingPriceLvl2: 0
-  buildingPriceLvl3: 0
-  buildingLevel: 0
-  bonus1: 0
-  bonus2: 0
-  bonus3: 0
-  bonusTotal: 0
 --- !u!114 &7991550196402923499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,7 +110,7 @@ MonoBehaviour:
   - {x: 0.85152245, y: -0.88257146, z: 0}
   m_ShapePathHash: -140895179
   m_Mesh: {fileID: 0}
-  m_InstanceId: 28626
+  m_InstanceId: 63004
 --- !u!61 &-544909268163165424
 BoxCollider2D:
   m_ObjectHideFlags: 0

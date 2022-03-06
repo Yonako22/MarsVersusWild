@@ -6,6 +6,8 @@ public class Infirmerie : Buildings
     // public int buildingHP;
     // public int buildingLevel = 1;
 
+    public ParticleSystemTest particle;
+
     public int bonus1 = 2;
     public int bonus2;
     public int bonus3;
@@ -32,9 +34,7 @@ public class Infirmerie : Buildings
         {
             #region Particle System
 
-            GetComponent <ParticleSystem>().Play ();
-            ParticleSystem.EmissionModule em = GetComponent<ParticleSystem>().emission;
-            em.enabled = true;
+            particle.BuildingDestroyed();   
 
             #endregion
             
@@ -54,6 +54,10 @@ public class Infirmerie : Buildings
 
     private void Upgrade()
     {
+        GetComponent <ParticleSystem>().Play ();
+        ParticleSystem.EmissionModule em = GetComponent<ParticleSystem>().emission;
+        em.enabled = true;
+
         if (buildingLevel == 1 && !hasUpgraded1)
         {
             #region bonus1

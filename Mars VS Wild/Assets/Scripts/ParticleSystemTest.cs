@@ -5,20 +5,20 @@ using UnityEngine;
 
 public class ParticleSystemTest : MonoBehaviour
 {
-    // void Update()
-    // {
-    //     if (Input.GetKey(KeyCode.Space))
-    //     {
-    //         GetComponent <ParticleSystem>().Play ();
-    //         ParticleSystem.EmissionModule em = GetComponent<ParticleSystem>().emission;
-    //         em.enabled = true;
-    //     }
-    // }
+    public GameObject building;
 
-    private void OnCollisionEnter(Collision collision)
+    public void BuildingDestroyed()
     {
-        GetComponent <ParticleSystem>().Play ();
         ParticleSystem.EmissionModule em = GetComponent<ParticleSystem>().emission;
+        GetComponent <ParticleSystem>().Play ();
         em.enabled = true;
+        Destroy(building);
+        StartCoroutine(Destroy());
+    }
+
+    IEnumerator Destroy()
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);
     }
 }
