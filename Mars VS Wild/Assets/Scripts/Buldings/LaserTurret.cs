@@ -23,6 +23,7 @@ public class LaserTurret : Buildings
     private Vector2 _rotation;
     void Start()
     {
+        laserTurretDestroyed = false;
         damage = 10;
         buildingHP = 30;
 
@@ -63,7 +64,10 @@ public class LaserTurret : Buildings
               laser2.SetActive(false);
               laser3.SetActive(false);
               laser4.SetActive(false);
-              StartCoroutine(Shoot());
+              if (!laserTurretDestroyed)
+              {
+                  StartCoroutine(Shoot());
+              }
         }
     }
     

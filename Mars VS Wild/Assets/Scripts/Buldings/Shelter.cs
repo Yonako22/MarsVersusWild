@@ -4,6 +4,8 @@ using UnityEngine.UI;
 public class Shelter : Buildings
 {
     public Slider healthBar;
+
+    public GameObject gameOverMenu;
     private void Start()
     {
         buildingHP = 100;
@@ -25,7 +27,8 @@ public class Shelter : Buildings
 
         if (buildingHP <= 0)
         {
-            Debug.Log("Lose");
+            gameOverMenu.SetActive(true);
+            Time.timeScale = 0;
         }
     }
     

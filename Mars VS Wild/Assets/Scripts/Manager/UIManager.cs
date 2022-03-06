@@ -83,5 +83,10 @@ namespace Manager
         {
             SceneManager.LoadScene("MainMenuScene");
         }
+
+        public void quitquit()
+        {
+            Application.Quit();
+        }
     }
 }
