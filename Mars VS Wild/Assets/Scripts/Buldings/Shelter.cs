@@ -6,6 +6,8 @@ public class Shelter : Buildings
     public Slider healthBar;
 
     public GameObject gameOverMenu;
+    
+    
     private void Start()
     {
         buildingHP = 100;
@@ -17,11 +19,11 @@ public class Shelter : Buildings
             
         if (buildingLevel == 2)
         {
-           GameManager.instance.woodPerSecond = 2;
+           GameManager.instance.woodPerSecond = 4;
         }
         if (buildingLevel == 3)
         {
-            GameManager.instance.woodPerSecond = 2.5f;
+            GameManager.instance.woodPerSecond = 6f;
             canBeUpgrade = false;
         }
 

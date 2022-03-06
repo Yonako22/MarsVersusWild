@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 221967998831190158}
-  speed: 140
+  speed: 100
   damage: 10
   attackCooldown: 1
   hp: 20

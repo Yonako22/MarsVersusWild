@@ -61,14 +61,17 @@ MonoBehaviour:
   buildingHP: 20
   col: {fileID: 0}
   canBeUpgrade: 0
-  buildingPriceLvl1: 100
-  buildingPriceLvl2: 40
-  buildingPriceLvl3: 40
+  buildingPriceLvl1: 35
+  buildingPriceLvl2: 35
+  buildingPriceLvl3: 35
   buildingLevel: 1
   bonus1: 2
   bonus2: 1
   bonus3: 1
   bonusTotal: 0
+  _BaseSprite: {fileID: 1202056461859756937}
+  _spritelvl2: {fileID: 3187933556719237259, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
+  _spritelvl3: {fileID: -5785817290576563572, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
 --- !u!198 &1156956112845328121
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -5196,7 +5199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7991550196402923499, guid: d6c0ab39d09d6c443a6062385bd02f60, type: 3}
       propertyPath: m_InstanceId
-      value: -406878
+      value: -15504
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c0ab39d09d6c443a6062385bd02f60, type: 3}
@@ -5208,5 +5211,10 @@ GameObject:
 --- !u!4 &4527963521172235133 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3375689405544076665, guid: d6c0ab39d09d6c443a6062385bd02f60, type: 3}
+  m_PrefabInstance: {fileID: 1156956111033923076}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1202056461859756937 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 45276307142602125, guid: d6c0ab39d09d6c443a6062385bd02f60, type: 3}
   m_PrefabInstance: {fileID: 1156956111033923076}
   m_PrefabAsset: {fileID: 0}

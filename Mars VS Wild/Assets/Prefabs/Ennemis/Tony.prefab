@@ -206,10 +206,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6942871648625581753}
-  speed: 50
-  damage: 30
+  speed: 20
+  damage: 15
   attackCooldown: 3
-  hp: 50
+  hp: 40
   buildingAttacked: {fileID: 0}
 --- !u!95 &1101703481
 Animator:

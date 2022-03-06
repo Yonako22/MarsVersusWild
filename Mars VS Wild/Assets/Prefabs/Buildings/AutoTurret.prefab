@@ -164,8 +164,8 @@ MonoBehaviour:
   col: {fileID: -3671316359095490778}
   canBeUpgrade: 0
   buildingPriceLvl1: 10
-  buildingPriceLvl2: 15
-  buildingPriceLvl3: 15
+  buildingPriceLvl2: 10
+  buildingPriceLvl3: 10
   buildingLevel: 1
   fireRateLvl1: 1.6
   fireRateLvl2: 2.1

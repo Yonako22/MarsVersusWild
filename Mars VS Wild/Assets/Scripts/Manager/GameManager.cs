@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
     public float totalTime;
     
     public float wood;
-    public float woodPerSecond = 1;
+    public float woodPerSecond = 2;
     
     public bool gonnaBuild;
     public bool gonnaSpawn;
@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     {
         GridManager.instance.GenerateGrid();
         
-        wood = 10;
+        wood = 50;
     }
 
     private void Update()

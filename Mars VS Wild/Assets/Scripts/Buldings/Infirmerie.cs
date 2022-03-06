@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class Infirmerie : Buildings
 {
     //Variables déjà serializé dans les class parent.
@@ -13,6 +15,11 @@ public class Infirmerie : Buildings
     private bool hasUpgraded1 = false;
     private bool hasUpgraded2 = false;
     private bool hasUpgraded3 = false;
+    
+    public SpriteRenderer _BaseSprite;
+
+    public Sprite _spritelvl2;
+    public Sprite _spritelvl3;
 
     void Start()
     {
@@ -75,6 +82,8 @@ public class Infirmerie : Buildings
             AnimalManager.instance.rhinoCounter -= bonus2;
             #endregion
 
+            _BaseSprite.sprite = _spritelvl2;
+            
             bonusTotal += bonus2;
             hasUpgraded2 = true;
         }
@@ -91,6 +100,8 @@ public class Infirmerie : Buildings
             AnimalManager.instance.rhinoCounter -= bonus3;
             #endregion
 
+            _BaseSprite.sprite = _spritelvl3;
+            
             bonusTotal += bonus3;
             hasUpgraded3 = true;
         }

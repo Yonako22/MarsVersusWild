@@ -127,10 +127,13 @@ MonoBehaviour:
   buildingHP: 50
   col: {fileID: 0}
   canBeUpgrade: 0
-  buildingPriceLvl1: 35
-  buildingPriceLvl2: 50
-  buildingPriceLvl3: 50
+  buildingPriceLvl1: 15
+  buildingPriceLvl2: 15
+  buildingPriceLvl3: 15
   buildingLevel: 1
+  _BaseSprite: {fileID: 500392074372616770}
+  _spritelvl2: {fileID: 4881011643325224528, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
+  _spritelvl3: {fileID: 4295705376675060128, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
 --- !u!114 &1597306103343348792
 MonoBehaviour:
   m_ObjectHideFlags: 0

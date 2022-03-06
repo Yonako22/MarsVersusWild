@@ -18,6 +18,11 @@ public class LaserTurret : Buildings
     public GameObject cannon3;
     public GameObject cannon4;
     
+    public SpriteRenderer _base;
+
+    public Sprite _baselvl2;
+    public Sprite _baselvl3;
+    
     public float shootingCooldown;
 
     private Vector2 _rotation;
@@ -76,11 +81,14 @@ public class LaserTurret : Buildings
         if (buildingLevel == 2)
         {
             damage = 15;
+            _base.sprite = _baselvl2;
         }
         
         if (buildingLevel == 3)
         {
             damage = 20;
+            _base.sprite = _baselvl3;
+
         }
     }
 }

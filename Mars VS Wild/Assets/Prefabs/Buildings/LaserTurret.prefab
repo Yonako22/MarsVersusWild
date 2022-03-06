@@ -196,8 +196,8 @@ MonoBehaviour:
   col: {fileID: -6964458219944899225}
   canBeUpgrade: 0
   buildingPriceLvl1: 20
-  buildingPriceLvl2: 30
-  buildingPriceLvl3: 30
+  buildingPriceLvl2: 20
+  buildingPriceLvl3: 20
   buildingLevel: 0
   damage: 10
   laser: {fileID: 5136975774199139116, guid: a086bc63db9ea5440ad1c34f55050cae, type: 3}
@@ -205,6 +205,9 @@ MonoBehaviour:
   cannon2: {fileID: 1778998562910217982}
   cannon3: {fileID: 1778998561386440792}
   cannon4: {fileID: 1778998561093020120}
+  _base: {fileID: 1778998561565666785}
+  _baselvl2: {fileID: 4133302850300694437, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
+  _baselvl3: {fileID: -1449165697856086586, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
   shootingCooldown: 3
 --- !u!61 &-6964458219944899225
 BoxCollider2D:
