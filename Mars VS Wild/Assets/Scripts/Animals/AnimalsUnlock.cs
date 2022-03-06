@@ -9,8 +9,11 @@ namespace Animals
         public EnemySpawnManager enemiesSpawn;
         private int placeToSpawn;
         public bool giraffeSpawned;
+        public bool giraffeUnlocked;
         public bool gorillaSpawned;
+        public bool gorillaUnlocked;
         public bool rhinoSpawned;
+        public bool rhinoUnlocked;
         public GameObject giraffe;
         public GameObject gorilla;
         public GameObject rhino;
@@ -19,19 +22,19 @@ namespace Animals
         {
             if (gameManager.totalTime > 45 && gameManager.totalTime < 46 && !giraffeSpawned)
             {
-                placeToSpawn = Random.Range(0, 14);
+                placeToSpawn = Random.Range(0, 13);
                 Instantiate(giraffe, enemiesSpawn.spawns[placeToSpawn].transform.position, Quaternion.identity);
                 giraffeSpawned = true;
             }
         
-            if (gameManager.totalTime > 90 && !gorillaSpawned)
+            if (gameManager.totalTime > 90 && gameManager.totalTime < 91 && !gorillaSpawned)
             {
                 placeToSpawn = Random.Range(0, 14);
                 Instantiate(gorilla, enemiesSpawn.spawns[placeToSpawn].transform.position, Quaternion.identity);
                 gorillaSpawned = true;
             }
         
-            if (gameManager.totalTime > 90 && !rhinoSpawned)
+            if (gameManager.totalTime > 135 && gameManager.totalTime < 136 && !rhinoSpawned)
             {
                 placeToSpawn = Random.Range(0, 14);
                 Instantiate(rhino, enemiesSpawn.spawns[placeToSpawn].transform.position, Quaternion.identity);

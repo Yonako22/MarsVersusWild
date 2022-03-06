@@ -11,7 +11,6 @@ namespace Animals
         public Animator animator;
         public Rigidbody2D rb;
         public BoxCollider2D bc;
-        public bool gorillaUnlocked;
         public AnimalsUnlock animalsUnlock;
         public UIManager ui;
     
@@ -21,7 +20,7 @@ namespace Animals
         private void Start()
         {
             animalsUnlock = GameObject.Find("GameManager").GetComponent<AnimalsUnlock>();
-            ui = GameObject.Find("GameManager").GetComponent<UIManager>();
+            ui = GameObject.Find("UI").GetComponent<UIManager>();
             StartCoroutine(Attack());
         }
 
@@ -35,19 +34,34 @@ namespace Animals
 
         private void FirstSpawn()
         {
-            bc.enabled = false;
             rb.velocity = new Vector2(0, -2f);
+            bc.size = new Vector2(1, 1);
         }
     
         private IEnumerator Attack()
         {
-            if (!animalsUnlock.gorillaSpawned)
+            if (animalsUnlock.gorillaUnlocked)
             {
+                bc.size = new Vector2(3, 3);
                 animator.SetBool("Attacking", true);
-                yield return new WaitForSeconds(0.5f);
-                animator.SetBool("Attacking", false);
+                rb.velocity = new Vector2(3, 3);
+                yield return new WaitForSeconds(0.1f);
                 bc.enabled = false;
-                rb.velocity = new Vector2(0, 3);
+                yield return new WaitForSeconds(0.6f);
+                bc.enabled = true;
+                rb.velocity = new Vector2(-3, 3);
+                yield return new WaitForSeconds(0.1f);
+                bc.enabled = false;
+                yield return new WaitForSeconds(0.6f);
+                bc.enabled = true;
+                rb.velocity = new Vector2(3, 3);
+                yield return new WaitForSeconds(0.1f);
+                bc.enabled = false;
+                yield return new WaitForSeconds(0.6f);
+                bc.enabled = true;
+                rb.velocity = new Vector2(-3, 3);
+                yield return new WaitForSeconds(0.1f);
+                bc.enabled = false;
                 Destroy(gameObject, 10);
             }
         }
@@ -57,12 +71,12 @@ namespace Animals
             if (animalsUnlock.gorillaSpawned && other.gameObject.CompareTag("Shelter"))
             {
                 animalsUnlock.gorillaSpawned = false;
-                gorillaUnlocked = true;
+                animalsUnlock.gorillaUnlocked = true;
                 ui.monkeyAvailable = true;
                 Destroy(gameObject);
             }
 
-            if (other.gameObject.CompareTag("Enemy"))
+            if (animalsUnlock.gorillaUnlocked && other.gameObject.CompareTag("Enemy"))
             {
                 Debug.Log("hit");
                 other.gameObject.GetComponent<Enemies>().hp -= damage;

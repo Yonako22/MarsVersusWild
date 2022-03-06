@@ -59,7 +59,7 @@ MonoBehaviour:
   - {x: 0.16070557, y: -0.43674648, z: 0}
   m_ShapePathHash: 80921523
   m_Mesh: {fileID: 0}
-  m_InstanceId: 125082
+  m_InstanceId: -826360
 --- !u!1 &8104393745233483795
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 4576258117201387682}
   - component: {fileID: 122516903}
   - component: {fileID: 112585065841382937}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GorilleTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.9924884, y: 3.0133157}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
 --- !u!50 &4576258117201387682
 Rigidbody2D:
@@ -189,7 +189,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -226,10 +226,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5afaa68e5b4d04fbaa82d0737c14f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
+  damage: 20
   animator: {fileID: 122516903}
   rb: {fileID: 4576258117201387682}
   bc: {fileID: 8701044511157764316}
-  gorillaUnlocked: 0
   animalsUnlock: {fileID: 0}
   ui: {fileID: 0}

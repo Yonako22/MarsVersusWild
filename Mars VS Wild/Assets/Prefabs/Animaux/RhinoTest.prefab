@@ -72,13 +72,13 @@ GameObject:
   - component: {fileID: -3080701708730463410}
   - component: {fileID: 99684969}
   - component: {fileID: 1814265147531892836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RhinoTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3917327363710464470
 Transform:
   m_ObjectHideFlags: 0
