@@ -44,10 +44,10 @@ public class AnimalManager : MonoBehaviour
     public int gorilleCD;
     public int rhinoCD;
 
-    public int perroquetCounter;
-    public int girafeCounter;
-    public int gorilleCounter;
-    public int rhinoCounter;
+    public float perroquetCounter;
+    public float girafeCounter;
+    public float gorilleCounter;
+    public float rhinoCounter;
 
     public bool cooldown1 = true;
     public bool cooldown2 = true;
@@ -79,11 +79,12 @@ public class AnimalManager : MonoBehaviour
     void Update()
     {
         #region Réduction des Cooldown
+
+        perroquetImage.fillAmount = ((perroquetCounter - 10) * -10) / 100;
         
-        perroquetImage.fillAmount = (perroquetCounter - 10) * -10;
-        girafeImage.fillAmount = girafeCD;
-        gorilleImage.fillAmount = gorilleCD;
-        rhinoImage.fillAmount = rhinoCD;
+        girafeImage.fillAmount = ((girafeCounter - 20) * -5f) / 100f;
+        gorilleImage.fillAmount = ((gorilleCounter - 40f) * -2.5f) / 100f;
+        rhinoImage.fillAmount = ((rhinoCounter - 50) * 2f) /100;
 
         if (perroquetCounter > 0 && cooldown1)
         {
