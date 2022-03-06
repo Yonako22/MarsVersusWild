@@ -6,7 +6,7 @@ public class Infirmerie : Buildings
     // public int buildingHP;
     // public int buildingLevel = 1;
 
-    public ParticleSystemTest particle;
+    public ParticleSystem particle;
 
     public int bonus1 = 2;
     public int bonus2;
@@ -54,8 +54,8 @@ public class Infirmerie : Buildings
 
     private void Upgrade()
     {
-        GetComponent <ParticleSystem>().Play ();
-        ParticleSystem.EmissionModule em = GetComponent<ParticleSystem>().emission;
+        GetComponent <UnityEngine.ParticleSystem>().Play ();
+        UnityEngine.ParticleSystem.EmissionModule em = GetComponent<UnityEngine.ParticleSystem>().emission;
         em.enabled = true;
 
         if (buildingLevel == 1 && !hasUpgraded1)

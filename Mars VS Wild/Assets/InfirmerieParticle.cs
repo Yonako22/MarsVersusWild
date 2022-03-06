@@ -6,8 +6,8 @@ public class InfirmerieParticle : MonoBehaviour
 {
     void Update()
     {
-        ParticleSystem.EmissionModule em = GetComponent<ParticleSystem>().emission;
-        GetComponent <ParticleSystem>().Play ();
+        UnityEngine.ParticleSystem.EmissionModule em = GetComponent<UnityEngine.ParticleSystem>().emission;
+        GetComponent <UnityEngine.ParticleSystem>().Play ();
         em.enabled = true;
     }
 }
