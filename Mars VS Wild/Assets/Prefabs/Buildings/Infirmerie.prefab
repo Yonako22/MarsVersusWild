@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 45276307142602125}
   - component: {fileID: 7991550196402923499}
   - component: {fileID: -544909268163165424}
+  - component: {fileID: 6578360736853175709}
   m_Layer: 0
   m_Name: Infirmerie
   m_TagString: Untagged
@@ -137,3 +138,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4871689, y: 1.2071141}
   m_EdgeRadius: 0
+--- !u!114 &6578360736853175709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6348146088805715395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a8a5722434a844db53f0462bbf0a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingHP: 0
+  col: {fileID: 0}
+  canBeUpgrade: 0
+  buildingPriceLvl1: 0
+  buildingPriceLvl2: 0
+  buildingPriceLvl3: 0
+  buildingLevel: 0
+  particle: {fileID: 0}
+  bonus1: 2
+  bonus2: 0
+  bonus3: 0
+  bonusTotal: 0

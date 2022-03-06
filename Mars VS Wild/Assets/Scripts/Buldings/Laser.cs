@@ -15,10 +15,7 @@ public class Laser : MonoBehaviour
     {
         if (col.CompareTag("Enemy"))
         {
-            Debug.Log(col.gameObject.GetComponent<Enemies>().hp);
-            Debug.Log(laserTurretScript.damage);
             col.gameObject.GetComponent<Enemies>().hp -= laserTurretScript.damage;
-            Debug.Log(col.gameObject.GetComponent<Enemies>().hp);
         }
     }
 }
