@@ -1,65 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1119632483
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1119632484}
-  - component: {fileID: 1119632485}
-  m_Layer: 0
-  m_Name: Shadow
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1119632484
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119632483}
-  m_LocalRotation: {x: -0, y: -0, z: -0.028375702, w: 0.9995974}
-  m_LocalPosition: {x: -0.002, y: -0.016, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3917327363710464470}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.252}
---- !u!114 &1119632485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119632483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_HasRenderer: 0
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 00000000654ba808
-  m_ShapePath:
-  - {x: -0.12045026, y: -0.45399874, z: 0}
-  - {x: -0.36773264, y: -0.21883923, z: 0}
-  - {x: -0.3427837, y: 0.030702323, z: 0}
-  - {x: 0.008012056, y: 0.18022189, z: 0}
-  - {x: 0.37606025, y: 0.036453098, z: 0}
-  - {x: 0.33322835, y: -0.21883935, z: 0}
-  - {x: 0.16070557, y: -0.43674648, z: 0}
-  m_ShapePathHash: 80921523
-  m_Mesh: {fileID: 0}
-  m_InstanceId: -802156
 --- !u!1 &8104393745233483795
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,10 +11,10 @@ GameObject:
   - component: {fileID: 3917327363710464470}
   - component: {fileID: 5373929952233052944}
   - component: {fileID: 8701044511157764316}
-  - component: {fileID: 112585065841382937}
   - component: {fileID: 4576258117201387682}
-  - component: {fileID: 122516903}
-  m_Layer: 0
+  - component: {fileID: -8260607055414051452}
+  - component: {fileID: 112585065841382937}
+  m_Layer: 8
   m_Name: GorilleTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,8 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1119632484}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -116,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc19ab5c29b2f4246b9a2353a9521560, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -136,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 0
   m_Sprite: {fileID: -6614553410548192088, guid: aeaed38b59ee76b4fa2c49489966e973, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -174,21 +113,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.9924884, y: 3.0133157}
   m_EdgeRadius: 0
---- !u!114 &112585065841382937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8104393745233483795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a5afaa68e5b4d04fbaa82d0737c14f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemies: {fileID: 0}
-  enemiesHit: []
-  damage: 0
 --- !u!50 &4576258117201387682
 Rigidbody2D:
   serializedVersion: 4
@@ -204,13 +128,13 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!95 &122516903
+--- !u!95 &-8260607055414051452
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -229,3 +153,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &112585065841382937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104393745233483795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5afaa68e5b4d04fbaa82d0737c14f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  animator: {fileID: -8260607055414051452}
+  rb: {fileID: 0}
+  bc: {fileID: 0}
+  gorillaUnlocked: 0
+  animalsUnlock: {fileID: 0}
+  ui: {fileID: 0}
