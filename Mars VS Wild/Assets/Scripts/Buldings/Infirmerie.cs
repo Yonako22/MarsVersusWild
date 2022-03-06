@@ -30,6 +30,14 @@ public class Infirmerie : Buildings
         Upgrade();
         if (buildingHP <= 0)
         {
+            #region Particle System
+
+            GetComponent <ParticleSystem>().Play ();
+            ParticleSystem.EmissionModule em = GetComponent<ParticleSystem>().emission;
+            em.enabled = true;
+
+            #endregion
+            
             #region RemoveTotalBonus
             AnimalAttacks.instance.perroquetCD += bonusTotal;
             AnimalAttacks.instance.perroquetCounter += bonusTotal;

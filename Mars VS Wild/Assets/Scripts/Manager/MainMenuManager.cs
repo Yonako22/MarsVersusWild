@@ -50,12 +50,28 @@ public class MainMenuManager : MonoBehaviour
 
     public void Rules()
     {
-        rulesMenu.SetActive(true);
+        if (!rulesMenu.activeSelf)
+        {
+            rulesMenu.SetActive(true);
+            settingsMenu.SetActive(false);
+        }
+        else
+        {
+            rulesMenu.SetActive(false);
+        }
     }
 
     public void Settings()
     {
-        settingsMenu.SetActive(true);
+        if (!settingsMenu.activeSelf)
+        {
+            settingsMenu.SetActive(true);
+            rulesMenu.SetActive(false);
+        }
+        else
+        {
+            settingsMenu.SetActive(false);
+        }
     }
 
     public void Quit()
