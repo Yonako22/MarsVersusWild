@@ -31,8 +31,8 @@ namespace Animals
             animator.SetBool("Attacking", false);
             placeToGo = Random.Range(0, 13);
             bc.enabled = false;
-            rb.velocity = new Vector2(1 * animalsUnlock.enemiesSpawn.spawns[placeToGo].transform.position.x,
-                 1* animalsUnlock.enemiesSpawn.spawns[placeToGo].transform.position.y);
+            rb.velocity = new Vector2(0.8f * animalsUnlock.enemiesSpawn.spawns[placeToGo].transform.position.x,
+                 0.8f * animalsUnlock.enemiesSpawn.spawns[placeToGo].transform.position.y);
             
             Destroy(gameObject, (5));
             yield return new WaitForEndOfFrame();
