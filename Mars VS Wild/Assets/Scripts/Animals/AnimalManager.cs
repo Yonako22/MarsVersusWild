@@ -62,65 +62,6 @@ public class AnimalManager : MonoBehaviour
     
     void Update()
     {
-        #region Inputs et UI
-
-        /*
-        // Clavier
-        if (Input.GetKeyDown(perroquet) || Input.GetKeyDown(girafe) || Input.GetKeyDown(gorille) ||
-            Input.GetKeyDown(rhino))
-        {
-            if (Input.GetKeyDown(perroquet))
-            {
-                animalSlot = 0;
-            }
-
-            if (Input.GetKeyDown(girafe))
-            {
-                animalSlot = 1;
-            }
-
-            if (Input.GetKeyDown(gorille))
-            {
-                animalSlot = 2;
-            }
-
-            if (Input.GetKeyDown(rhino))
-            {
-                animalSlot = 3;
-            }
-        }
-        
-        //Choix de l'animal sélectionné
-        if (Input.GetKeyDown(KeyCode.Mouse0) && animalSlot != 4 && canSummon)
-        {
-
-            if (animalSlot == 0 && perroquetCounter <= 0)
-            {
-                Perroquet();
-                perroquetCounter = perroquetCD;
-            }
-
-            else if (animalSlot == 1 && girafeCounter <= 0)
-            {
-                Girafe();
-                girafeCounter = girafeCD;
-            }
-
-            else if (animalSlot == 2 && gorilleCounter <= 0)
-            {
-                Gorille();
-                gorilleCounter = gorilleCD;
-            }
-
-            else if (animalSlot == 3 && rhinoCounter <= 0)
-            {
-                Rhino();
-                rhinoCounter = rhinoCD;
-            }
-        }
-        */
-        #endregion
-        
         #region Réduction des Cooldown
 
         if (perroquetCounter > 0 && cooldown1)
@@ -169,7 +110,6 @@ public class AnimalManager : MonoBehaviour
             GameManager.instance.gonnaBuild = false;
             GameManager.instance.gonnaSpawn = true;
             animalToSpawn = prefabGirafe;
-          //  Girafe();
             girafeCounter = girafeCD;
         }
     }
@@ -181,7 +121,6 @@ public class AnimalManager : MonoBehaviour
             GameManager.instance.gonnaBuild = false;
             GameManager.instance.gonnaSpawn = true;
             animalToSpawn = prefabGorille;
-          //  Gorille(); 
             gorilleCounter = gorilleCD;
         }
     }
@@ -193,7 +132,6 @@ public class AnimalManager : MonoBehaviour
             GameManager.instance.gonnaBuild = false;
             GameManager.instance.gonnaSpawn = true;
             animalToSpawn = prefabRhino;
-          //  Rhino();
             rhinoCounter = rhinoCD;
         }
     }

@@ -16,7 +16,7 @@ public class Tile : MonoBehaviour
     {
         _highlight.SetActive(false);
     }
-
+    
     void OnMouseEnter()
     {
         _highlight.SetActive(true);
@@ -26,30 +26,52 @@ public class Tile : MonoBehaviour
     {
         if (!UIManager.instance.isPaused)
         {
-            if (GameManager.instance.gonnaBuild)
+            GameObject buildingToBuild = BuildingManager.instance.GetBuildingToBuild();
+
+            if (GameManager.instance.gonnaUpgrade)
             {
                 if (building != null)
                 {
-                    buildingScript = building.GetComponent<Buildings>();  
-                    if(!buildingScript.canBeUpgrade)
-                    {
-                        Debug.Log("Impossible de construire ici, il y a déjà une tourelle.");
-                        return;
-                    }
-                                                                        
+                    buildingScript = building.GetComponent<Buildings>();
+
                     if (buildingScript.canBeUpgrade)
                     {
-                        buildingScript.buildingLevel +=1;
+                        if (building.gameObject.GetComponent<Buildings>().buildingLevel == 1)
+                        {
+                            if (GameManager.instance.wood >= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl2) 
+                            {
+                                GameManager.instance.wood -= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl2;
+                                buildingScript.buildingLevel +=1;
+                            }
+                        } 
+                        if (building.gameObject.GetComponent<Buildings>().buildingLevel == 2)
+                        { 
+                            if (GameManager.instance.wood >= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl3) 
+                            {
+                         
+                                GameManager.instance.wood -= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl3; buildingScript.buildingLevel +=1;
+                            }
+                        } 
+                        if (building.gameObject.GetComponent<Buildings>().buildingLevel == 3)
+                        {
+                            Debug.Log("Reach max upgrade");
+                        }
                     }
+                }
+            }
+            else if (GameManager.instance.gonnaBuild)
+            {
+                if (building != null)
+                {
+                    Debug.Log("Impossible de construire ici, il y a déjà une tourelle.");
                 }
                 else
                 {
-                    GameObject buildingToBuild = BuildingManager.instance.GetBuildingToBuild();
-            
                     if (GameManager.instance.wood >= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl1)
                     {
-                        building = (GameObject)Instantiate(buildingToBuild, transform.position, quaternion.identity);
+                        building = Instantiate(buildingToBuild, transform.position, quaternion.identity);
                         GameManager.instance.wood -= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl1;
+                        GameManager.instance.gonnaBuild = false;
                     }
                     else
                     {
@@ -57,12 +79,11 @@ public class Tile : MonoBehaviour
                     }
                 }
             }
-
-            if (GameManager.instance.gonnaSpawn)
+            else if (GameManager.instance.gonnaSpawn)
             {
                 GameObject animalToSpawn = AnimalManager.instance.GetAnimalToSpawn();
-                
                 animal = Instantiate(animalToSpawn, transform.position, quaternion.identity);
+                GameManager.instance.gonnaSpawn = false;
             }
         }
     }
