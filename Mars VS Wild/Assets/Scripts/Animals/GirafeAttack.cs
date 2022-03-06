@@ -21,7 +21,7 @@ public class GirafeAttack : MonoBehaviour
     private void Start()
     {
         animalsUnlock = GameObject.Find("GameManager").GetComponent<AnimalsUnlock>();
-        ui = GameObject.Find("GameManager").GetComponent<UIManager>();
+        ui = GameObject.Find("UI").GetComponent<UIManager>();
         StartCoroutine(Attack());
     }
 
@@ -35,7 +35,6 @@ public class GirafeAttack : MonoBehaviour
 
     private void FirstSpawn()
     {
-        bc.enabled = false;
         rb.velocity = new Vector2(0, -2f);
     }
     
@@ -62,7 +61,7 @@ public class GirafeAttack : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.gameObject.CompareTag("Enemy"))
+        if (giraffeUnlocked && other.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("hit");
             other.gameObject.GetComponent<Enemies>().hp -= damage;

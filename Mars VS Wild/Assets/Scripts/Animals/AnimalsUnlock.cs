@@ -19,7 +19,7 @@ public class AnimalsUnlock : MonoBehaviour
 
     void Update()
     {
-        if (gameManager.totalTime > 45 && !giraffeSpawned)
+        if (gameManager.totalTime > 45 && gameManager.totalTime < 46 && !giraffeSpawned)
         {
             placeToSpawn = Random.Range(0, 14);
             Instantiate(giraffe, enemiesSpawn.spawns[placeToSpawn].transform.position, Quaternion.identity);
