@@ -7,6 +7,7 @@ namespace Animals
 {
     public class GorilleAttack : MonoBehaviour
     {
+        
         #region Variables
         [SerializeField] private int damage; //Dégâts de l'animal
         public Animator animator;
@@ -17,8 +18,7 @@ namespace Animals
 
         private bool alreadyHit;
         #endregion
-
-
+        
         private void Start()
         {
             animalsUnlock = GameObject.Find("AnimalManager").GetComponent<AnimalsUnlock>();
