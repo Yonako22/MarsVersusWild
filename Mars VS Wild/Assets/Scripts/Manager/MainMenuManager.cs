@@ -16,7 +16,24 @@ public class MainMenuManager : MonoBehaviour
     
     public GameObject rulesMenu;
     public GameObject settingsMenu;
+    public GameObject creditsMenu;
 
+    [Header("Backgrounds")] 
+    public GameObject background;
+    public Sprite backgroundSun;
+    public Sprite backgroundNight;
+
+    public bool sun;
+
+    public Image sunButton;
+    public Image nightButton;
+
+    public void Awake()
+    {
+        background.GetComponent<Image>().sprite = backgroundSun;
+        sun = true;
+    }
+    
     public void Start() //Recherche des résolutions disponibles
     {
         resolutions = Screen.resolutions;
@@ -41,6 +58,20 @@ public class MainMenuManager : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
     }
 
+    public void Update()
+    {
+        if (sun)
+        {
+            sunButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+            nightButton.GetComponent<Image>().color = new Color(0.8f, 0.8f, 0.8f, 1f);
+        }
+        else
+        {
+            nightButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+            sunButton.GetComponent<Image>().color = new Color(0.8f, 0.8f, 0.8f, 1f);
+        }
+    }
+
     #region MainMenu
     
     public void StartGame()
@@ -54,6 +85,7 @@ public class MainMenuManager : MonoBehaviour
         {
             rulesMenu.SetActive(true);
             settingsMenu.SetActive(false);
+            creditsMenu.SetActive(false);
         }
         else
         {
@@ -67,10 +99,25 @@ public class MainMenuManager : MonoBehaviour
         {
             settingsMenu.SetActive(true);
             rulesMenu.SetActive(false);
+            creditsMenu.SetActive(false);
         }
         else
         {
             settingsMenu.SetActive(false);
+        }
+    }
+
+    public void Credits()
+    {
+        if (!creditsMenu.activeSelf)
+        {
+            creditsMenu.SetActive(true);
+            rulesMenu.SetActive(false);
+            settingsMenu.SetActive(false);
+        }
+        else
+        {
+            creditsMenu.SetActive(false);
         }
     }
 
@@ -106,6 +153,31 @@ public class MainMenuManager : MonoBehaviour
     public void SettingsExit()
     {
         settingsMenu.SetActive(false);
+    }
+    
+    #endregion
+    
+    #region Credits
+
+    public void CreditsExit()
+    {
+        creditsMenu.SetActive(false);
+    }
+    
+    #endregion
+
+    #region Night and Day
+    
+    public void Sun()
+    {
+        sun = true;
+        background.GetComponent<Image>().sprite = backgroundSun;
+    }
+
+    public void Night()
+    {
+        sun = false;
+        background.GetComponent<Image>().sprite = backgroundNight;
     }
     
     #endregion
