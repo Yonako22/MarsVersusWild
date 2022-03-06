@@ -11,7 +11,7 @@ public class Shelter : Buildings
 
     void Update()
     {
-//        healthBar.value = buildingHP;
+       healthBar.value = buildingHP;
             
         if (buildingLevel == 2)
         {
