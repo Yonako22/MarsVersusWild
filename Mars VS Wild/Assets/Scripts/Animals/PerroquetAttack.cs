@@ -19,7 +19,7 @@ namespace Animals
         
         private void Start()
         {
-            animalsUnlock = GameObject.Find("GameManager").GetComponent<AnimalsUnlock>();
+            animalsUnlock = GameObject.Find("AnimalManager").GetComponent<AnimalsUnlock>();
             ui = GameObject.Find("UI").GetComponent<UIManager>();
             StartCoroutine(Attack());
         }

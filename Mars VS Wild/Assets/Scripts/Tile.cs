@@ -9,6 +9,9 @@ public class Tile : MonoBehaviour
     public GameObject building;
     public Buildings buildingScript;
 
+    public GameObject animal;
+    public AnimalManager animalManager;
+
     private void Start()
     {
         _highlight.SetActive(false);
@@ -23,33 +26,43 @@ public class Tile : MonoBehaviour
     {
         if (!UIManager.instance.isPaused)
         {
-            if (building != null)
+            if (GameManager.instance.gonnaBuild)
             {
-                buildingScript = building.GetComponent<Buildings>();  
-                if(!buildingScript.canBeUpgrade)
+                if (building != null)
                 {
-                    Debug.Log("Impossible de construire ici, il y a déjà une tourelle.");
-                    return;
-                }
+                    buildingScript = building.GetComponent<Buildings>();  
+                    if(!buildingScript.canBeUpgrade)
+                    {
+                        Debug.Log("Impossible de construire ici, il y a déjà une tourelle.");
+                        return;
+                    }
                                                                         
-                if (buildingScript.canBeUpgrade)
-                {
-                    buildingScript.buildingLevel +=1;
-                }
-            }
-            else
-            {
-                GameObject buildingToBuild = BuildingManager.instance.GetBuildingToBuild();
-            
-                if (GameManager.instance.wood >= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl1)
-                {
-                    building = (GameObject)Instantiate(buildingToBuild, transform.position, quaternion.identity);
-                    GameManager.instance.wood -= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl1;
+                    if (buildingScript.canBeUpgrade)
+                    {
+                        buildingScript.buildingLevel +=1;
+                    }
                 }
                 else
                 {
-                    Debug.Log("pas assez d'argent");
+                    GameObject buildingToBuild = BuildingManager.instance.GetBuildingToBuild();
+            
+                    if (GameManager.instance.wood >= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl1)
+                    {
+                        building = (GameObject)Instantiate(buildingToBuild, transform.position, quaternion.identity);
+                        GameManager.instance.wood -= buildingToBuild.GetComponent<Buildings>().buildingPriceLvl1;
+                    }
+                    else
+                    {
+                        Debug.Log("pas assez d'argent");
+                    }
                 }
+            }
+
+            if (GameManager.instance.gonnaSpawn)
+            {
+                GameObject animalToSpawn = AnimalManager.instance.GetAnimalToSpawn();
+                
+                animal = Instantiate(animalToSpawn, transform.position, quaternion.identity);
             }
         }
     }

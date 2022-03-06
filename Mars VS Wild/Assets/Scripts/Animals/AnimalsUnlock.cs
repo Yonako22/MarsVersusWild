@@ -8,12 +8,16 @@ namespace Animals
         public GameManager gameManager;
         public EnemySpawnManager enemiesSpawn;
         private int placeToSpawn;
+        
         public bool giraffeSpawned;
         public bool giraffeUnlocked;
+        
         public bool gorillaSpawned;
         public bool gorillaUnlocked;
+        
         public bool rhinoSpawned;
         public bool rhinoUnlocked;
+        
         public GameObject giraffe;
         public GameObject gorilla;
         public GameObject rhino;
