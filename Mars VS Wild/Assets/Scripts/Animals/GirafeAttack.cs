@@ -11,7 +11,7 @@ namespace Animals
         public Animator animator;
         public Rigidbody2D rb;
         public BoxCollider2D bc;
-        public bool giraffeUnlocked;
+        
         public AnimalsUnlock animalsUnlock;
         public UIManager ui;
     
@@ -40,7 +40,7 @@ namespace Animals
     
         private IEnumerator Attack()
         {
-            if (giraffeUnlocked)
+            if (animalsUnlock.giraffeUnlocked)
             {
                 animator.SetBool("Attacking", true);
                 yield return new WaitForSeconds(0.5f);
@@ -56,12 +56,12 @@ namespace Animals
             if (animalsUnlock.giraffeSpawned && other.gameObject.CompareTag("Shelter"))
             {
                 animalsUnlock.giraffeSpawned = false;
-                giraffeUnlocked = true;
+                animalsUnlock.giraffeUnlocked = true;
                 ui.GirafAvailable = true;
                 Destroy(gameObject);
             }
 
-            if (giraffeUnlocked && other.gameObject.CompareTag("Enemy"))
+            if (animalsUnlock.giraffeUnlocked && other.gameObject.CompareTag("Enemy"))
             {
                 Debug.Log("hit");
                 other.gameObject.GetComponent<Enemies>().hp -= damage;
