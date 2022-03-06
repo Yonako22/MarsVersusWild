@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
     
     public float wood;
     public float woodPerSecond = 1;
+    
+    public bool gonnaBuild;
+    public bool gonnaSpawn;
+    
     private void Awake()
     {
         if (instance != null)

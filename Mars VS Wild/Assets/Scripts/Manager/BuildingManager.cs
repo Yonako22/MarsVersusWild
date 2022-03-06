@@ -27,16 +27,32 @@ public class BuildingManager : MonoBehaviour
 
     public void setBuildAutoTurret()
     {
+        GameManager.instance.gonnaBuild = true;
+        GameManager.instance.gonnaSpawn = false;
         numberOfAutoTurrets++;
         buildingToBuild = buildings[0];
     }
     public void setBuildLaserTurret()
     {
+        GameManager.instance.gonnaBuild = true;
+        GameManager.instance.gonnaSpawn = false;
         numberOfLaserTurrets++;
         buildingToBuild = buildings[1];
     }
-    public void setBuildBarricades() { buildingToBuild = buildings[2]; }
-    public void setBuildInfirmary() { buildingToBuild = buildings[3]; }
+
+    public void setBuildBarricades()
+    {
+        GameManager.instance.gonnaBuild = true;
+        GameManager.instance.gonnaSpawn = false;
+        buildingToBuild = buildings[2];
+    }
+
+    public void setBuildInfirmary()
+    {
+        GameManager.instance.gonnaBuild = true;
+        GameManager.instance.gonnaSpawn = false;
+        buildingToBuild = buildings[3];
+    }
 
     public GameObject GetBuildingToBuild()
     {

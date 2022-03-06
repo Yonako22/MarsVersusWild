@@ -17,10 +17,6 @@ namespace Manager
         public GameObject areUSureToQuit;
         public GameObject options;
         public GameObject pauseMenu;
-        public bool monkeyAvailable;
-        public bool rhinoAvailable;
-        public bool parrotAvailable;
-        public bool GirafAvailable;
 
         private void Awake()
         {
@@ -37,11 +33,6 @@ namespace Manager
             isPaused = false;
             quitOptions = false;
             wood = 1.5f;
-            
-            monkeyAvailable = false;
-            rhinoAvailable = false;
-            parrotAvailable = true;
-            GirafAvailable = false;
         }
     
         void Update()
@@ -92,25 +83,5 @@ namespace Manager
         {
             SceneManager.LoadScene("MainMenuScene");
         }
-
-        public void Gorilla()
-        {
-            
-        }
-
-        public void Girafe()
-        {
-            
-        }
-
-        public void Parrot()
-        {
-            
-        }
-        public void Rhino()
-        {
-            
-        }
-
     }
 }

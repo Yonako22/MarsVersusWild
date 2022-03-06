@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using Manager;
 using UnityEngine;
 
@@ -12,15 +13,16 @@ namespace Animals
         public Rigidbody2D rb;
         public BoxCollider2D bc;
         public AnimalsUnlock animalsUnlock;
-        public UIManager ui;
-    
+        public UIManager uiManager;
+
+        private bool alreadyHit;
         #endregion
 
 
         private void Start()
         {
-            animalsUnlock = GameObject.Find("GameManager").GetComponent<AnimalsUnlock>();
-            ui = GameObject.Find("UI").GetComponent<UIManager>();
+            animalsUnlock = GameObject.Find("AnimalManager").GetComponent<AnimalsUnlock>();
+            uiManager = GameObject.Find("UI").GetComponent<UIManager>();
             StartCoroutine(Attack());
         }
 
@@ -72,16 +74,24 @@ namespace Animals
             {
                 animalsUnlock.gorillaSpawned = false;
                 animalsUnlock.gorillaUnlocked = true;
-                ui.monkeyAvailable = true;
                 Destroy(gameObject);
             }
 
             if (animalsUnlock.gorillaUnlocked && other.gameObject.CompareTag("Enemy"))
             {
-                Debug.Log("hit");
-                other.gameObject.GetComponent<Enemies>().hp -= damage;
+                if (!alreadyHit)
+                {
+                    other.gameObject.GetComponent<Enemies>().hp -= damage;
+                    alreadyHit = true;
+                    StartCoroutine(AttackCd());
+                }
             }
         }
-    
+
+        IEnumerator AttackCd()
+        {
+            yield return new WaitForSeconds(1);
+            alreadyHit = false;
+        }
     }
 }

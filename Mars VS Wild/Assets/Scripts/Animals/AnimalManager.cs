@@ -1,12 +1,14 @@
 using System.Collections;
-using System.Diagnostics;
+using Animals;
 using UnityEngine;
-using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
-public class AnimalAttacks : MonoBehaviour
+public class AnimalManager : MonoBehaviour
 {
-    public static AnimalAttacks instance;
+    public static AnimalManager instance;
+    public AnimalsUnlock animalsUnlock;
+
+    public GameObject animalToSpawn;
 
     void Awake()
     {
@@ -16,6 +18,8 @@ public class AnimalAttacks : MonoBehaviour
             return;
         }
         instance = this;
+
+        animalsUnlock = gameObject.GetComponent<AnimalsUnlock>();
     }
 
     #region Variables
@@ -60,6 +64,8 @@ public class AnimalAttacks : MonoBehaviour
     {
         #region Inputs et UI
 
+        /*
+        // Clavier
         if (Input.GetKeyDown(perroquet) || Input.GetKeyDown(girafe) || Input.GetKeyDown(gorille) ||
             Input.GetKeyDown(rhino))
         {
@@ -112,7 +118,7 @@ public class AnimalAttacks : MonoBehaviour
                 rhinoCounter = rhinoCD;
             }
         }
-
+        */
         #endregion
         
         #region Réduction des Cooldown
@@ -139,27 +145,79 @@ public class AnimalAttacks : MonoBehaviour
 
         #endregion
     }
+    public GameObject GetAnimalToSpawn()
+    {
+        return animalToSpawn;
+    }
+    
+    public void callPerroquet()
+    {
+        if (perroquetCounter <= 0)
+        {
+            GameManager.instance.gonnaBuild = false;
+            GameManager.instance.gonnaSpawn = true;
+            animalToSpawn = prefabPerroquet;
+           //  Perroquet();
+             perroquetCounter = perroquetCD;
+        }
+    }
+
+    public void callGirafe()
+    {
+        if (girafeCounter <= 0 && animalsUnlock.giraffeUnlocked)
+        {
+            GameManager.instance.gonnaBuild = false;
+            GameManager.instance.gonnaSpawn = true;
+            animalToSpawn = prefabGirafe;
+          //  Girafe();
+            girafeCounter = girafeCD;
+        }
+    }
+
+    public void callGorille()
+    {
+        if (gorilleCounter <= 0 && animalsUnlock.gorillaUnlocked)
+        {
+            GameManager.instance.gonnaBuild = false;
+            GameManager.instance.gonnaSpawn = true;
+            animalToSpawn = prefabGorille;
+          //  Gorille(); 
+            gorilleCounter = gorilleCD;
+        }
+    }
+
+    public void callRhino()
+    {
+        if (rhinoCounter <= 0 && animalsUnlock.rhinoUnlocked)
+        {
+            GameManager.instance.gonnaBuild = false;
+            GameManager.instance.gonnaSpawn = true;
+            animalToSpawn = prefabRhino;
+          //  Rhino();
+            rhinoCounter = rhinoCD;
+        }
+    }
 
     #region Appel de l'invocation de l'animal
 
     void Perroquet()
     {
-        SummonAnimal(prefabPerroquet, Vector3.zero, Quaternion.identity, 0.5f, new Vector2(1, 1));
+        SummonAnimal(prefabPerroquet, Vector3.zero, Quaternion.identity, 0.5f);
     }
 
     void Girafe()
     {
-        SummonAnimal(prefabGirafe, Vector3.zero, Quaternion.identity, 1.5f, new Vector2(1, 6));
+        SummonAnimal(prefabGirafe, Vector3.zero, Quaternion.identity, 1.5f);
     }
 
     void Gorille()
     {
-        SummonAnimal(prefabGorille, Vector3.zero, Quaternion.identity, 3f, new Vector2(3, 3));
+        SummonAnimal(prefabGorille, Vector3.zero, Quaternion.identity, 3f);
     }
 
     void Rhino()
     {
-        SummonAnimal(prefabRhino, Vector3.zero, Quaternion.identity, 2f, new Vector2(3, 1));
+        SummonAnimal(prefabRhino, Vector3.zero, Quaternion.identity, 2f);
     }
 
     #endregion
@@ -167,7 +225,7 @@ public class AnimalAttacks : MonoBehaviour
     #region Invocation et Destruction
 
     //Invoque l'animal selon les paramètres définis
-    void SummonAnimal(GameObject _animal, Vector3 _position, Quaternion _quaternion, float _time, Vector2 _size)
+    void SummonAnimal(GameObject _animal, Vector3 _position, Quaternion _quaternion, float _time)
     {
         summonedAnimal = Instantiate(_animal, _position, _quaternion);
         StartCoroutine(DestroyAnimal(_time));
@@ -216,25 +274,4 @@ public class AnimalAttacks : MonoBehaviour
     }
     
     #endregion
-    
-    #region UI Animals
-
-    public void uiParrot()
-    {
-        animalSlot = 0;
-    }
-    public void uiGirafe()
-    {
-        animalSlot = 1;
-    }
-    public void uiGorilla()
-    {
-        animalSlot = 2;
-    }
-    public void uiRhino()
-    {
-        animalSlot = 3;
-    }
-    #endregion
-
 }

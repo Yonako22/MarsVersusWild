@@ -19,7 +19,7 @@ namespace Animals
 
         private void Start()
         {
-            animalsUnlock = GameObject.Find("GameManager").GetComponent<AnimalsUnlock>();
+            animalsUnlock = GameObject.Find("AnimalManager").GetComponent<AnimalsUnlock>();
             ui = GameObject.Find("UI").GetComponent<UIManager>();
             StartCoroutine(Attack());
         }
@@ -57,13 +57,11 @@ namespace Animals
             {
                 animalsUnlock.rhinoSpawned = false;
                 animalsUnlock.rhinoUnlocked = true;
-                ui.rhinoAvailable = true;
                 Destroy(gameObject);
             }
 
             if (animalsUnlock.rhinoUnlocked && other.gameObject.CompareTag("Enemy"))
             {
-                Debug.Log("hit");
                 other.gameObject.GetComponent<Enemies>().hp -= damage;
             }
         }

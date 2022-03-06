@@ -39,14 +39,14 @@ public class Infirmerie : Buildings
             #endregion
             
             #region RemoveTotalBonus
-            AnimalAttacks.instance.perroquetCD += bonusTotal;
-            AnimalAttacks.instance.perroquetCounter += bonusTotal;
-            AnimalAttacks.instance.girafeCD += bonusTotal;
-            AnimalAttacks.instance.girafeCounter += bonusTotal;
-            AnimalAttacks.instance.gorilleCD += bonusTotal;
-            AnimalAttacks.instance.gorilleCounter += bonusTotal;
-            AnimalAttacks.instance.rhinoCD += bonusTotal;
-            AnimalAttacks.instance.rhinoCounter += bonusTotal;
+            AnimalManager.instance.perroquetCD += bonusTotal;
+            AnimalManager.instance.perroquetCounter += bonusTotal;
+            AnimalManager.instance.girafeCD += bonusTotal;
+            AnimalManager.instance.girafeCounter += bonusTotal;
+            AnimalManager.instance.gorilleCD += bonusTotal;
+            AnimalManager.instance.gorilleCounter += bonusTotal;
+            AnimalManager.instance.rhinoCD += bonusTotal;
+            AnimalManager.instance.rhinoCounter += bonusTotal;
             #endregion
             Destroy(gameObject);
         }
@@ -57,14 +57,14 @@ public class Infirmerie : Buildings
         if (buildingLevel == 1 && !hasUpgraded1)
         {
             #region bonus1
-            AnimalAttacks.instance.perroquetCD -= bonus1;
-            AnimalAttacks.instance.perroquetCounter -= bonus1;
-            AnimalAttacks.instance.girafeCD -= bonus1;
-            AnimalAttacks.instance.girafeCounter -= bonus1;
-            AnimalAttacks.instance.gorilleCD -= bonus1;
-            AnimalAttacks.instance.gorilleCounter -= bonus1;
-            AnimalAttacks.instance.rhinoCD -= bonus1;
-            AnimalAttacks.instance.rhinoCounter -= bonus1;
+            AnimalManager.instance.perroquetCD -= bonus1;
+            AnimalManager.instance.perroquetCounter -= bonus1;
+            AnimalManager.instance.girafeCD -= bonus1;
+            AnimalManager.instance.girafeCounter -= bonus1;
+            AnimalManager.instance.gorilleCD -= bonus1;
+            AnimalManager.instance.gorilleCounter -= bonus1;
+            AnimalManager.instance.rhinoCD -= bonus1;
+            AnimalManager.instance.rhinoCounter -= bonus1;
             #endregion
 
             bonusTotal += bonus1;
@@ -75,14 +75,14 @@ public class Infirmerie : Buildings
         if (buildingLevel == 2 && !hasUpgraded2)
         {
             #region bonus2
-            AnimalAttacks.instance.perroquetCD -= bonus2;
-            AnimalAttacks.instance.perroquetCounter -= bonus2;
-            AnimalAttacks.instance.girafeCD -= bonus2;
-            AnimalAttacks.instance.girafeCounter -= bonus2;
-            AnimalAttacks.instance.gorilleCD -= bonus2;
-            AnimalAttacks.instance.gorilleCounter -= bonus2;
-            AnimalAttacks.instance.rhinoCD -= bonus2;
-            AnimalAttacks.instance.rhinoCounter -= bonus2;
+            AnimalManager.instance.perroquetCD -= bonus2;
+            AnimalManager.instance.perroquetCounter -= bonus2;
+            AnimalManager.instance.girafeCD -= bonus2;
+            AnimalManager.instance.girafeCounter -= bonus2;
+            AnimalManager.instance.gorilleCD -= bonus2;
+            AnimalManager.instance.gorilleCounter -= bonus2;
+            AnimalManager.instance.rhinoCD -= bonus2;
+            AnimalManager.instance.rhinoCounter -= bonus2;
             #endregion
 
             bonusTotal += bonus2;
@@ -92,14 +92,14 @@ public class Infirmerie : Buildings
         if (buildingLevel == 3 && !hasUpgraded3)
         {
             #region bonus3
-            AnimalAttacks.instance.perroquetCD -= bonus3;
-            AnimalAttacks.instance.perroquetCounter -= bonus3;
-            AnimalAttacks.instance.girafeCD -= bonus3;
-            AnimalAttacks.instance.girafeCounter -= bonus3;
-            AnimalAttacks.instance.gorilleCD -= bonus3;
-            AnimalAttacks.instance.gorilleCounter -= bonus3;
-            AnimalAttacks.instance.rhinoCD -= bonus3;
-            AnimalAttacks.instance.rhinoCounter -= bonus3;
+            AnimalManager.instance.perroquetCD -= bonus3;
+            AnimalManager.instance.perroquetCounter -= bonus3;
+            AnimalManager.instance.girafeCD -= bonus3;
+            AnimalManager.instance.girafeCounter -= bonus3;
+            AnimalManager.instance.gorilleCD -= bonus3;
+            AnimalManager.instance.gorilleCounter -= bonus3;
+            AnimalManager.instance.rhinoCD -= bonus3;
+            AnimalManager.instance.rhinoCounter -= bonus3;
             #endregion
 
             bonusTotal += bonus3;
