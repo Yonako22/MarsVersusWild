@@ -25,15 +25,14 @@ public class GridManager : MonoBehaviour
     }
 
    public void GenerateGrid() 
-    {
-        _tiles = new Dictionary<Vector2, Tile>();
+    { _tiles = new Dictionary<Vector2, Tile>();
         
-        for (int x = 0; x < _width; x++) 
+        for (int x = 0; x < _width; x++)
         {
-            for (int y = 0; y < _height; y++) 
+            for (int y = 0; y < _height; y++)
             {
                 var spawnedTile = Instantiate(_tilePrefab, new Vector3(x, y), Quaternion.identity);
-                spawnedTile.name = $"Tile {x} {y}";
+                spawnedTile.name = "Tile {x} {y}";
                 
                 _tiles[new Vector2(x, y)] = spawnedTile;
             }

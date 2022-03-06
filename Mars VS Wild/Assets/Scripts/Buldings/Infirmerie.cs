@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public class Infirmerie : MonoBehaviour
+public class Infirmerie : Buildings
 {
-    public int buildingHP;
-    public int buildingLevel = 1;
+    //Variables déjà serializé dans les class parent.
+    // public int buildingHP;
+    // public int buildingLevel = 1;
 
     public int bonus1 = 2;
     public int bonus2;

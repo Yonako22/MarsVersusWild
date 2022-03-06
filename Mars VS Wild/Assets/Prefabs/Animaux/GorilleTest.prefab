@@ -227,9 +227,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  animator: {fileID: 0}
-  rb: {fileID: 0}
-  bc: {fileID: 0}
+  animator: {fileID: 122516903}
+  rb: {fileID: 4576258117201387682}
+  bc: {fileID: 8701044511157764316}
   gorillaUnlocked: 0
   animalsUnlock: {fileID: 0}
   ui: {fileID: 0}
