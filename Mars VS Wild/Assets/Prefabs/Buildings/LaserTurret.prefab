@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 1778998561565666785}
   - component: {fileID: 1778998561565666784}
   - component: {fileID: -6964458219944899225}
+  - component: {fileID: 2347565322087693477}
   m_Layer: 9
   m_Name: LaserTurret
   m_TagString: Building
@@ -167,7 +168,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 4914768820537909141, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -231,6 +232,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2347565322087693477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778998561565666787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000654ba808
+  m_ShapePath:
+  - {x: -0.22688341, y: -0.268265, z: 0}
+  - {x: -0.276541, y: 0.25998855, z: 0}
+  - {x: 0.22688365, y: 0.28481746, z: 0}
+  - {x: 0.2434361, y: -0.23515987, z: 0}
+  m_ShapePathHash: 921504941
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -120650
 --- !u!1 &1778998562910217982
 GameObject:
   m_ObjectHideFlags: 0

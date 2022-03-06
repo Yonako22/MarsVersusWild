@@ -10,65 +10,34 @@ public class AnimalsUnlock : MonoBehaviour
     public GameManager gameManager;
     public EnemySpawnManager enemiesSpawn;
     private int placeToSpawn;
-    public bool giraffeUnlocked;
-    public bool gorillaUnlocked;
-    public bool rhinoUnlocked;
+    public bool giraffeSpawned;
+    public bool gorillaSpawned;
+    public bool rhinoSpawned;
     public GameObject giraffe;
     public GameObject gorilla;
     public GameObject rhino;
-    public UIManager ui;
 
     void Update()
     {
-        if (gameManager.totalTime > 45 && !giraffeUnlocked)
+        if (gameManager.totalTime > 45 && gameManager.totalTime < 46 && !giraffeSpawned)
         {
             placeToSpawn = Random.Range(0, 14);
             Instantiate(giraffe, enemiesSpawn.spawns[placeToSpawn].transform.position, Quaternion.identity);
-            giraffe.GetComponent<GirafeAttack>().enabled = false;
-            giraffe.GetComponent<BoxCollider2D>().enabled = false;
-            giraffe.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 150);
-            giraffeUnlocked = true;
+            giraffeSpawned = true;
         }
         
-        if (gameManager.totalTime > 90 && !gorillaUnlocked)
+        if (gameManager.totalTime > 90 && !gorillaSpawned)
         {
             placeToSpawn = Random.Range(0, 14);
             Instantiate(gorilla, enemiesSpawn.spawns[placeToSpawn].transform.position, Quaternion.identity);
-            gorilla.GetComponent<GorilleAttack>().enabled = false;
-            gorilla.GetComponent<BoxCollider2D>().enabled = false;
-            gorilla.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 150);
-            gorillaUnlocked = true;
+            gorillaSpawned = true;
         }
         
-        if (gameManager.totalTime > 90 && !rhinoUnlocked)
+        if (gameManager.totalTime > 90 && !rhinoSpawned)
         {
             placeToSpawn = Random.Range(0, 14);
             Instantiate(rhino, enemiesSpawn.spawns[placeToSpawn].transform.position, Quaternion.identity);
-            rhino.GetComponent<RhinoAttack>().enabled = false;
-            rhino.GetComponent<BoxCollider2D>().enabled = false;
-            rhino.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 150);
-            gorillaUnlocked = true;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (giraffeUnlocked && col.gameObject.CompareTag("Shelter"))
-        {
-            //Déverrouiller la girafe dans le menu puis détruire le gameobject
-            ui.GirafAvailable = true;
-        }
-        
-        if (gorillaUnlocked && col.gameObject.CompareTag("Shelter"))
-        {
-            //Déverrouiller le gorille dans le menu puis détruire le gameobject
-            ui.monkeyAvailable = true;
-        }
-        
-        if (rhinoUnlocked && col.gameObject.CompareTag("Shelter"))
-        {
-            //Déverrouiller le gorille dans le menu puis détruire le gameobject
-            ui.rhinoAvailable = true;
+            rhinoSpawned = true;
         }
     }
 }

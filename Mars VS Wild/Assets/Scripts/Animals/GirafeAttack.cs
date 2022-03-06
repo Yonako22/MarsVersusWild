@@ -1,51 +1,72 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Manager;
 using UnityEngine;
 
 public class GirafeAttack : MonoBehaviour
 {
     #region Variables
-    
-    public Enemies enemies; //Script des ennemis
-
-    [SerializeField] private List<GameObject> enemiesHit = new List<GameObject>(); //Stocke les ennemis déjà touchés
-
     [SerializeField] private int damage; //Dégâts de l'animal
     public Animator animator;
     public Rigidbody2D rb;
+    public BoxCollider2D bc;
+    public bool giraffeUnlocked;
+    public AnimalsUnlock animalsUnlock;
+    public UIManager ui;
     
     #endregion
 
 
     private void Start()
     {
+        animalsUnlock = GameObject.Find("GameManager").GetComponent<AnimalsUnlock>();
+        ui = GameObject.Find("UI").GetComponent<UIManager>();
         StartCoroutine(Attack());
     }
 
+    private void Update()
+    {
+        if (animalsUnlock.giraffeSpawned)
+        {
+            FirstSpawn();
+        }
+    }
+
+    private void FirstSpawn()
+    {
+        rb.velocity = new Vector2(0, -2f);
+    }
+    
     private IEnumerator Attack()
     {
-        animator.SetBool("Attacking", true);
-        yield return new WaitForSeconds(0.31f);
-        animator.SetBool("Attacking", false);
-        rb.velocity = new Vector2(0, 150);
+        if (giraffeUnlocked)
+        {
+            animator.SetBool("Attacking", true);
+            yield return new WaitForSeconds(0.5f);
+            animator.SetBool("Attacking", false);
+            bc.enabled = false;
+            rb.velocity = new Vector2(0, 3);
+            Destroy(gameObject, 10);
+        }
     }
 
-    private void OnBecameInvisible()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);
-    }
+        if (animalsUnlock.giraffeSpawned && other.gameObject.CompareTag("Shelter"))
+        {
+            animalsUnlock.giraffeSpawned = false;
+            giraffeUnlocked = true;
+            ui.GirafAvailable = true;
+            Destroy(gameObject);
+        }
 
-    // private void OnTriggerStay2D(Collider2D other)
-    // {
-    //     if (other.CompareTag("Enemy") && !enemiesHit.Contains(other.gameObject))
-    //     {
-    //         //enemies = other.gameObject.GetComponent<Enemies>();
-    //         //enemies.hp -= damage;
-    //         enemiesHit.Add(other.gameObject);
-    //         Debug.Log("Dégâts");
-    //     }
-    // }
+        if (giraffeUnlocked && other.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("hit");
+            other.gameObject.GetComponent<Enemies>().hp -= damage;
+            other.transform.position = new Vector2(other.transform.position.x, other.transform.position.y + 2);
+        }
+    }
     
-    //Les ennemis doivent avoir un BoxCollider2D, un Rigidbody2D et avoir le Tag "Enemy"
 }

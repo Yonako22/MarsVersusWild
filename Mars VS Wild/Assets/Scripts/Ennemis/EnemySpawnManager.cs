@@ -27,7 +27,7 @@ public class EnemySpawnManager : MonoBehaviour
     private IEnumerator Spawn()
     {
         enemyToSpawn = Random.Range(0, 2);
-        placeToSpawn = Random.Range(0, 13);
+        placeToSpawn = Random.Range(0, 14);
         yield return new WaitForEndOfFrame();
 
         if (enemyToSpawn == 0)

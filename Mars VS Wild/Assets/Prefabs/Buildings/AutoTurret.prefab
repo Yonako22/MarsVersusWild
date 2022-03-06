@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 4852800596033179627}
   - component: {fileID: -5883769152025693312}
   - component: {fileID: -3671316359095490778}
+  - component: {fileID: 1397706997}
   m_Layer: 0
   m_Name: AutoTurret
   m_TagString: Building
@@ -85,7 +86,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,7 +106,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: 5
   m_Sprite: {fileID: -8160064416255599005, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -171,6 +172,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.71286434, y: 0.41528744}
   m_EdgeRadius: 0
+--- !u!114 &1397706997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4852800596033179629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000654ba808
+  m_ShapePath:
+  - {x: -0.30701256, y: -0.20888317, z: 0}
+  - {x: -0.29065752, y: 0.1467346, z: 0}
+  - {x: 0.33645117, y: 0.17290246, z: 0}
+  - {x: 0.34299314, y: -0.21542501, z: 0}
+  m_ShapePathHash: 1238175717
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 25194
 --- !u!1 &7126740063667600658
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +249,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -242,7 +269,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: -8071228274543311316, guid: 3dc2bf902e9417c4bb35746b978f666a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
