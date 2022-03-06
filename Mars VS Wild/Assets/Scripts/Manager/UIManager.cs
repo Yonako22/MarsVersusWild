@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,12 +7,13 @@ namespace Manager
 {
     public class UIManager : MonoBehaviour
     {
+        public static UIManager instance;
 
         public float wood;
         public float woodPerSecond = 1;
         public bool quitOptions;
         public TextMeshProUGUI woodTxt;
-        [SerializeField] private bool isPaused;
+        public bool isPaused;
         public GameObject areUSureToQuit;
         public GameObject options;
         public GameObject pauseMenu;
@@ -19,7 +21,17 @@ namespace Manager
         public bool rhinoAvailable;
         public bool parrotAvailable;
         public bool GirafAvailable;
-    
+
+        private void Awake()
+        {
+            if (instance != null)
+            {
+                Debug.LogError("Bruuuuuhhh");
+                return;
+            }
+            instance = this;
+        }
+
         void Start()
         {
             isPaused = false;
@@ -42,12 +54,14 @@ namespace Manager
         {
             Time.timeScale = 1;
             pauseMenu.SetActive(false);
+            isPaused = false;
         }
     
         public void Pause()
         {
             Time.timeScale = 0f;
             pauseMenu.SetActive(true);
+            isPaused = true;
         }
 
         public void Options()

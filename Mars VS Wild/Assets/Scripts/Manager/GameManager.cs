@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogWarning("STOP! Game");
+            Debug.LogError("STOP! Game");
             return;
         }
 

@@ -21,11 +21,6 @@ public class AutoTurret : Buildings
     public Vector2 topRightCorner;
     public Vector2 botDownCorner;
 
-    private void Start()
-    {
-        InvokeRepeating("UpdateTarget", 0f, 0.5f);
-    }
-
     private void Update()
     {
         float shortestDistance = Mathf.Infinity;
@@ -78,14 +73,15 @@ public class AutoTurret : Buildings
     
     void Shoot()
     {
+        Debug.Log("shoot");
         GameObject bulletGO = (GameObject) Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        /*Bullet bullet = bulletGO.GetComponent<Bullet>();
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
 
         if (bullet != null)
         {
             bullet.Seek(target);
         }
-        */
+        
     }
 
     void OnDrawGizmos()
