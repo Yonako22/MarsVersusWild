@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -9216650883266840979}
   - component: {fileID: 2216102532655101849}
   - component: {fileID: 1870868332}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GirafeTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -146,11 +146,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c22e463e24a344fb73f44def54aea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: {fileID: 0}
-  enemiesHit: []
   damage: 15
-  animator: {fileID: 0}
+  animator: {fileID: 1870868332}
   rb: {fileID: -9216650883266840979}
+  bc: {fileID: 8018084621987586708}
+  animalsUnlock: {fileID: 0}
+  ui: {fileID: 0}
 --- !u!95 &1870868332
 Animator:
   serializedVersion: 3

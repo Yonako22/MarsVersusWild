@@ -1,30 +1,72 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using Manager;
 using UnityEngine;
 
 public class GorilleAttack : MonoBehaviour
 {
     #region Variables
-    
-    public Enemies enemies; //Script des ennemis
-    public Animator animator;
-
-    [SerializeField] private List<GameObject> enemiesHit = new List<GameObject>(); //Stocke les ennemis déjà touchés
-
     [SerializeField] private int damage; //Dégâts de l'animal
+    public Animator animator;
+    public Rigidbody2D rb;
+    public BoxCollider2D bc;
+    public bool gorillaUnlocked;
+    public AnimalsUnlock animalsUnlock;
+    public UIManager ui;
     
     #endregion
-    
-    private void OnTriggerStay2D(Collider2D other)
+
+
+    private void Start()
     {
-        if (other.CompareTag("Enemy") && !enemiesHit.Contains(other.gameObject))
+        animalsUnlock = GameObject.Find("GameManager").GetComponent<AnimalsUnlock>();
+        ui = GameObject.Find("GameManager").GetComponent<UIManager>();
+        StartCoroutine(Attack());
+    }
+
+    private void Update()
+    {
+        if (animalsUnlock.gorillaSpawned)
+        {
+            FirstSpawn();
+        }
+    }
+
+    private void FirstSpawn()
+    {
+        bc.enabled = false;
+        rb.velocity = new Vector2(0, -2f);
+    }
+    
+    private IEnumerator Attack()
+    {
+        if (!animalsUnlock.gorillaSpawned)
         {
             animator.SetBool("Attacking", true);
-            //enemies = other.gameObject.GetComponent<Enemies>();
-            //enemies.hp -= damage;
-            enemiesHit.Add(other.gameObject);
-            Debug.Log("Dégâts");
+            yield return new WaitForSeconds(0.5f);
+            animator.SetBool("Attacking", false);
+            bc.enabled = false;
+            rb.velocity = new Vector2(0, 3);
+            Destroy(gameObject, 10);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (animalsUnlock.gorillaSpawned && other.gameObject.CompareTag("Shelter"))
+        {
+            animalsUnlock.gorillaSpawned = false;
+            gorillaUnlocked = true;
+            ui.monkeyAvailable = true;
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("hit");
+            other.gameObject.GetComponent<Enemies>().hp -= damage;
         }
     }
     
-    //Les ennemis doivent avoir un BoxCollider2D, un Rigidbody2D et avoir le Tag "Enemy"
 }

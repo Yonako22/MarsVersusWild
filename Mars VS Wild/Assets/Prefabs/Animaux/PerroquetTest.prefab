@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -3335234351507833445}
   - component: {fileID: 3351827259732787955}
   - component: {fileID: 6628577774919537768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PerroquetTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}

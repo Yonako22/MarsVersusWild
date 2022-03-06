@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3917327363710464470}
   - component: {fileID: 5373929952233052944}
   - component: {fileID: 8701044511157764316}
-  - component: {fileID: 112585065841382937}
   - component: {fileID: 4576258117201387682}
   - component: {fileID: -8260607055414051452}
-  m_Layer: 0
+  - component: {fileID: 112585065841382937}
+  m_Layer: 8
   m_Name: GorilleTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,22 +113,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.9924884, y: 3.0133157}
   m_EdgeRadius: 0
---- !u!114 &112585065841382937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8104393745233483795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a5afaa68e5b4d04fbaa82d0737c14f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemies: {fileID: 0}
-  animator: {fileID: 0}
-  enemiesHit: []
-  damage: 0
 --- !u!50 &4576258117201387682
 Rigidbody2D:
   serializedVersion: 4
@@ -169,3 +153,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &112585065841382937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104393745233483795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5afaa68e5b4d04fbaa82d0737c14f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  animator: {fileID: -8260607055414051452}
+  rb: {fileID: 0}
+  bc: {fileID: 0}
+  gorillaUnlocked: 0
+  animalsUnlock: {fileID: 0}
+  ui: {fileID: 0}

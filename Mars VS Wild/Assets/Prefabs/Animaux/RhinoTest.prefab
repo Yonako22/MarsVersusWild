@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -3080701708730463410}
   - component: {fileID: 4356470577430185774}
   - component: {fileID: 1814265147531892836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RhinoTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
