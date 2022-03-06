@@ -38,7 +38,7 @@ namespace Manager
         void Update()
         {
             wood += Time.deltaTime * woodPerSecond;
-            woodTxt.text = " " + (int)wood;
+            woodTxt.text =  Mathf.RoundToInt(GameManager.instance.wood).ToString();
         }
 
         public void Resume()

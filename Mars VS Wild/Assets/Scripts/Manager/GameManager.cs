@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     
     public bool gonnaBuild;
     public bool gonnaSpawn;
+    public bool gonnaUpgrade;
     
     private void Awake()
     {
@@ -39,5 +40,14 @@ public class GameManager : MonoBehaviour
         }
         
         wood += Time.deltaTime * woodPerSecond;
+
+        if (!gonnaBuild && !gonnaSpawn)
+        {
+            gonnaUpgrade = true;
+        }
+        else
+        {
+            gonnaUpgrade = false;
+        }
     }
 }
