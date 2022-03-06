@@ -42,7 +42,6 @@ namespace Animals
         {
             if (other.gameObject.CompareTag("Enemy"))
             {
-                Debug.Log("hit");
                 other.gameObject.GetComponent<Enemies>().hp -= damage;
             }
         }

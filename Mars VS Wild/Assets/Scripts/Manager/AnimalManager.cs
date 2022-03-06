@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using Animals;
 using UnityEngine;
+using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
 public class AnimalManager : MonoBehaviour
@@ -52,6 +54,12 @@ public class AnimalManager : MonoBehaviour
     public bool cooldown3 = true;
     public bool cooldown4 = true;
 
+    public Image perroquetImage;
+    public Image girafeImage;
+    public Image gorilleImage;
+    public Image rhinoImage;
+
+
     [Header("TemporaryVariable")] public GameObject summonedAnimal; //Stocke le dernier animal invoqué pour le détruire
 
     private int animalSlot = 4; //Permet d'invoquer l'animal sélectionné
@@ -59,10 +67,23 @@ public class AnimalManager : MonoBehaviour
     private bool canSummon = true; //Empêche le spam d'animaux tant que celui d'avant est toujours actif
 
     #endregion
-    
+
+    private void Start()
+    {
+        perroquetCD = 10;
+        girafeCD = 20;
+        gorilleCD = 40; 
+        rhinoCD = 50;
+    }
+
     void Update()
     {
         #region Réduction des Cooldown
+        
+        perroquetImage.fillAmount = (perroquetCounter - 10) * -10;
+        girafeImage.fillAmount = girafeCD;
+        gorilleImage.fillAmount = gorilleCD;
+        rhinoImage.fillAmount = rhinoCD;
 
         if (perroquetCounter > 0 && cooldown1)
         {
@@ -83,7 +104,6 @@ public class AnimalManager : MonoBehaviour
         {
             StartCoroutine(Cooldown4());
         }
-
         #endregion
     }
     public GameObject GetAnimalToSpawn()
