@@ -150,6 +150,7 @@ MonoBehaviour:
   animator: {fileID: 1870868332}
   rb: {fileID: -9216650883266840979}
   bc: {fileID: 8018084621987586708}
+  giraffeUnlocked: 0
   animalsUnlock: {fileID: 0}
   ui: {fileID: 0}
 --- !u!95 &1870868332
