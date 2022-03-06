@@ -26,7 +26,7 @@ public class Enemies : MonoBehaviour
     {
         buildingAttacked = other.gameObject;
         buildings = buildingAttacked.GetComponent<Buildings>();
-        
+
         if (other.gameObject.CompareTag("Building"))
         {
             StartCoroutine(Attack());
